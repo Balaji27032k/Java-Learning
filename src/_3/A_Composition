@@ -1,0 +1,127 @@
+Composition is another component of Object-oriented Programming
+Let's review another inheritance example before we move into composition.
+    let's say we're interested in building a computer,and we want to assemble it.All the parts are manufacturer's products,
+    which we have to buy and assemble,to sell our final product,the personal computer.
+    Next we'll have to look at a class diagram of some computer products,or computer parts.
+Inheritance
+In this instance,we have a base class called Product.             Product
+All of our computer parts are going to inherit from Product.        model:String
+All our parts will then have the same set of attributes,a           manufacturer:String
+a manufacturer and model,and dimentions,the width,height            width,height,depth:int
+and depth in other words.                                         |
+All of these items are products,a         ________________________|_______________________________________
+particular type of Product.              |                 |                       |                    |
+Pc,monitor,motherboard,case        PersonalComputer     Monitor                Motherboard         ComputerCase
+are few parts sold by the
+computer distributor.
+
+Inheritance vs Composition                      Product
+Inheritance defines an IS A relationship.    _____________
+Composition defines a HAS A relationship.          |                                      ---------->Monitor
+                                                   |{IS A}                                |
+To keep this diagram simple,                PersonalComputer                              |
+PersonalComputer inherits from                monitor:Monitor                             |
+Product.                                      motherboard:Motherboard   <-----------------|--------->Motherboard
+But a Personal Computer, in addition to       computerCase:ComputerCase    Is made up of  |
+being a product,is actually made up of other                                  (HAS A)     |
+parts.                                                                                    |
+Composition is actually modelling parts,and those parts make up a greater whole.          |
+In this case,we're going to model the personal computer.                                  |---------->ComputerCase
+And we're modelling the has a relationship,with the motherboard,the case and the monitor.we've already created the parts
+but we didn't really make them different from each other.we'll look at the individual class diagram of those classes.
+
+Monitor                                        Computer case                                MotherBoard
+size:int                                       powerSupply:String                           ramSlots:int
+resolution:String                              pressPowerButton()                           cardSlots:int
+drawPixelAt(int x,int y,String color)                                                       bios:String
+                                                                                            loadProgram(String prgramName)
+This diagram shows the 3 classes that will make up the personal computer.
+
+Composition
+Inheritance is a way to reuse functionality and attributes.
+Composition is a way to make the combination of classes,act like a single coherent object.
+
+Composition is creating a whole from different parts
+We built this personal computer,by passing objects,to the constructor,like assembling the computer.
+we can actually hide the functionality further (refer A_Composition.java)
+Let's continue now and look at another scenario whereby we can hide the functionality further
+In this case we're not going to allow the calling program,to access those objects,the parts directly.
+We don't want anybody to access the Monitor,Motherboard or ComputerCase directly.
+Composition is creating Objects within objects.
+It's like we're creating a master object.In this case,the personal computer is managing and looking after its parts,
+and it uses composition to achieve that.
+
+Use Composition or Inheritance or Both?
+    As a general rule,when you're designing your programs in java,you probably want to look at composition first.
+    Most of the experts will tell you,that as a rule,look at using composition before implementing inheritance.
+    You saw in this example,we actually used both.
+    All of our parts were able to inherit a set of attributes,like the manufacturer and model.
+    The calling code didn't have to know anything about these parts,to get Personal Computer to do something.it was able to tell
+    the personal computer to powerUp,and the personal computer delegated that work to its parts.
+
+Why is composition is preferred over inheritance in many designs?
+The reasons composition is preferred over inheritance:
+    Composition is more flexible.You can add parts in,or remove them,and these changes are less likely to have a downstream effect.
+    Composition provides functional reuse outside of the class hierarchy,meaning classes can share attributes & behavior,by
+    having similar components,instead of inheriting functionality from a parent or base class.
+    Java's inheritance breaks encapsulation,because subclasses may need direct access to a parent's state or behavior.
+Why is inheritance is less flexible?
+    Inheritance is less flexible.
+    Adding a class to,or removing a class from,a class hierarchy,may impact all subclasses from that point.
+    In addition,a new subclass may not need all the functionality or attributes of its parent class and therefore adding the
+subclass will muddy the waters,meaning the model no longer represents the reality in the code.
+
+Adding a Digital Product
+Let's say we want to include digital products,                         Product
+Should Digital Product inherit from Product?                            model:String
+Here we show the model with Digital Product,                            manufacturer:String
+inheriting from our current definition of Product.                      width,height,depth:int
+If we do this,this should mean Digital Product has
+Product's attributes,but this isn't true now.         Motherboard                                   Digital Product
+A digital product wouldn't really have width          ramslots,cardSlots:int                        version:String
+height,and depth,so this model isn't a good           bios:String                                   releaseDate:Date
+representation of what we want to build.              loadProgram(String programName)               runProgram()
+It would be better if we didn't have those 3 attributes on Product,but instead used composition to include them on certain
+products,but not all products.
+
+Revised Class Diagram                                                               Product
+Consider this revised class diagram.                                                model:String
+We haven't completely removed the class hierarchy,                                    manufacturer:String
+but we've made the base class,Product more generic.                                         | Inherits (IS A)
+We've removed the width,height and depth attributes                                          |
+from Product,and made a new class,Dimensions,with   Dimensions    ------------------>    Motherboard
+those attributes.                                   width,height,depth:int  (HAS A)     ramslots,cardSlots:int
+And we've added an attribute to Motherboard,which                                       bios:String
+is dimensions,which has those attributes.                                               loadProgram(String programName)
+
+Is this a better model?
+    well,it's more flexible.
+    This design allows for future enhancements to be made,like the addition of the subclass Digital Product,without causing
+    problems for existing code,that may already be extending Product.
+    By pulling width,height,and depth,into a dimension class, we can use composition,to apply those attributes any product,as
+we did here with Motherboard,but we're not requiring that all subclasses be defined with those attributes.
+    This is just one example of the inflexibility of inheritance,compared to a more flexible design with composition.
+
+The Composition Challenge
+In this challenge,you need to create an application for controlling a smart Kitchen.
+Your smart kitchen will have several appliances.            SmartKitchen                        Refrigerator
+Your appliances will be Internet Of Things(IOT),              brewMaster:CoffeeMaker                hasWorkToDo:boolean
+which can be programmed.                                      dishWasher:DishWasher                 orderFood()
+                                                              iceBox:Refrigerator               DishWasher
+For example,you might do stuff in your kitchen              -------------------------               hasWorkToDo:boolean
+in the morning,in a rush to get to work,and then              addWater()                            doDishes()
+expect your smart kitchen appliances to run automatically     pourMilk()                        CoffeeMaker
+at a later time.                                              loadDishwasher()                      hasWorkToDo:boolean
+It's your job to write the code,to enable your smart          setKitchenState(boolean x 3)          brewCoffee()
+kitchen application,to execute certain jobs.                  doKitchenWork()
+Methods on your SmartKitchen class,will determine what work needs to be done:
+    addWater() will set the Coffee Maker's hasWorkToDo field to true.
+    pourMilk() will set Refrigerator's haSWorkToDo to true.
+    loadDishWasher() will set the hasWorkToDo flag to true,on that appliance.
+Alternatively,you could have a single method,called setKitchenState,that takes 3 boolean values,which could combine the 3 above.
+To execute the work needed to be done by the appliances,you'll implement this in two ways:
+    First,your application will access each appliance(by using a getter),and execute a method.
+        The appliance methods are orderFood() on Refrigerator,doDishes() on DishWasher and brewCoffee() on CoffeeMaker.
+        These methods should check the hasWorkToDo flag,and if true,print a message out,about what work is being done.
+    Second,your application won't access the appliances directly.
+        It should call doKitchenWork(),which delegates the work,to any of its appliances.

@@ -1,0 +1,70 @@
+What does Encapsulation mean?
+    In java,encapsulation means hiding things,by making them private or inaccessible.
+Why would we want to hide things in Java?
+    To make the interface simpler,we may want to hide unnecessary details.
+    To protect the integrity of data on an object,we may hide or restrict access to some of the data and operations.
+    To decouple the published interface from the internal details of the class, we may hide antual names and types of class
+    members.This gives us more flexibility,if we have to change the class in future.
+What do we mean by Interface here?
+    Although Java has a type called interface,that's not what we're talking about here.
+    When we talk about a class's public or published interface,we're really talking about the class members that are exposed to,
+or can be accessed by,the calling code.
+    Everything else in the class is internal,or private to it.
+    An Application Programming Interface(API) is the public contract,that tells others how to use the class.
+
+The problems when classes aren't properly encapsulated?
+    Allowing direct access to data on an object,can bypass checks and operations.
+    It encourages an interdependency,or coupling between the calling code and the class.
+    This interdependency makes it hard to change the class,without impacting the calling code.
+    For the previous example,we showed that changing a field name,broke the calling code.
+    And we also showed,that the calling code had to take on the responsiblity,for properly initializing a new Player.
+Benefits of Encapsulation
+    That's really one of the huge benefits of encapsulation,is that you're not actually affecting any other code.
+    it's sort of like a BlackBox in many ways.
+    EnhancedPlayer has more control over its data.
+    Staying in Control
+        This is why we want to use encapsulation.
+        We protect the members of the class,and some methods from external access.
+        This prevents calling code from bypassing the rules and constrains,we've build into the class.
+        When we create a new instance,it's initialized with valid data.
+        But likewise,we're also making sure that there's no direct access to the fields.
+        That's why you want to always use encapsulation.
+        it's something that you should really get used to.
+Encapsulation Principles
+To create an encapsulated class,you want to:
+    Create constructors for object initialization,which enforces that only objects with valid data will get created.
+    Use the private access modifiers for your fields.
+    Use setter and getter methods sparingly,and only as needed.
+    Use access modifiers that aren't private,only for the methods that the calling code needs to use.
+You definitely don't want to be creating code like the Players class,when you're creating public fields.In the majority of
+cases,you don't want to give access to other classes because,as you saw,it's more work to make those changes when you create,
+or when you change a field name,or something of that nature.
+Now we did show you a case,in the inheritance video,where we used protected access modifier instead of private.
+This lets subclasses have direct access to these fields,for functions they need to perform,but even this should be used carefully,
+and with a thoughtful planned approach.
+
+Encapsulation Challenge
+In this challenge,you need to create a class named Printer.it's going to simulate a real computer printer,a laser printer.
+The fields on this class are going to be :                                              Printer
+    toner level,which is the percentage of how much toner level is left.                 tonerLevel:int
+    pagesPrinted,which is the count of total pages printed by printer.                   pagesePrinted:int
+    duplex,which is a boolean indicator.if true,it can print on 2 sides                  duplex:boolean
+    of a single sheet of paper.                                                        ------------------------
+You'll want to initialize your printer,by specifying a starting toner amount,            addToner(int tonerAmount):int
+and whether the printer is duplex or not.                                                printPages(int pages):int
+On the printer class, you want to create two methods,which the calling code should be able to access.
+These methods are:
+    addToner() which takes a tonerAmount argument
+        tonerAmount is added to the tonerLevel field.
+        The tonerLevel should never exceed 100 percent,or ever get below 0 percent.
+        If the amount being added makes the level fall outside that range,return a -1 from the method,otherwise return the
+        actual toner level.
+    printPages() which should take pages to be printed as the argument.
+        It should determine how many sheets of paper,will be printed based on the duplex value,and return this sheet number
+        from the method.
+        The sheet number should also be added to the pagesPrinted variable.
+        If it's a duplex printer,print a message that it's a duplex printer.
+
+
+
+
