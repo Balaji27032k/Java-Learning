@@ -1,0 +1,33 @@
+String vs StringBuilder
+    Since String is immutable,each method call returns a new instance of a String.
+    As an alternative Java provides a mutable class that lets us change its text value.This is the StringBuilder class.
+
+Creating Instances
+    Instantiating String Objects                                Instantiating StringBuilder Objects
+    String hello = "Hello";                         StringBuilder helloBuilder  = new StringBuilder("Hello");
+    String helloworld = "Hello"+"World";            StringBuilder emptyBuilder  = new StringBuilder();
+    String badHello = new String("Hello");          StringBuilder emptyBuilder5 = new StringBuilder(5);
+    //valid code but redundant                      StringBuilder stringBuilder = new StringBuilder(helloBuilder);
+
+    There are four ways to create a new StringBuilder Object,using the new keyword.
+        Pass a String.
+        Pass no arguments at all.
+        Pass an integer value.
+        Pass some other type of character sequence(like StringBuilder).
+String methods vs StringBuilder methods
+    String methods create a new object in memory,and return a reference to this new object.
+    StringBuilder methods return a StringBuilder reference,but it's really a self-reference.
+    Unlike strings,we can call methods on StringBuilders without the need to assign the results,to an intermediate variables
+    as we saw with strings.
+    StringBuilder methods return this self-reference,to support chaining methods together.
+
+some methods unique to StringBuilder class
+A String Builder class has many similar methods to Strings
+But it also has methods to remove and insert characters or Strings,and truncate it's size.
+method                        description
+delete                        You can delete a substring using indices to specify a range,or delete a single character at an index.
+deleteCharAt
+insert                        You can insert text at a specified position.
+reverse                       You can reverse the order of the characters in the sequence.
+setLength                     setLength can be used to truncate the sequence,or include null sequences to fill out the sequence
+                              to that length.

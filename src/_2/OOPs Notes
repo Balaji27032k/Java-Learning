@@ -1,0 +1,268 @@
+What is Object Oriented Programming?
+Object oriented programming is a way to model real-world objects as software objects which contain both data and code.
+OOP is a common acronym for Object Oriented Progarmming it's also called Class based programming.
+Class Based Programming
+Class based programming starts with classes which become the blueprints for objects.
+But what does this really mean?
+    To start,we need to understand what objects are.They're really the key to understanding this object oriented terminology.
+Real World Object Exercise:
+    What I'd like you to do is just have a look around in the area you're sitting in right now.And if you do that,you'll
+    find that many examples of real-world objects.
+    For example,I'm sitting here and i can see,
+        computer
+        keyboard
+        microphone
+        shelves on the wall
+        door
+    All of these are examples of real-world objects.
+State and Behaviour:
+    Real world objects have two major components:
+        State       -> Characteristics about the item that can be described.
+        Behaviour   -> Objects may have behaviour or actions that can be performed by the object,or upon the object.
+    State(Computer)                                                 State(ant)
+        state in terms of computer object might be                  we could also describe animate objects like people,animals
+            the amount of ram it has                                For an ant ,the state might be:
+            the os it's running                                         The age
+            the hard drive size                                         number of legs
+            the size of the monitor                                     conscious state
+        These are characteristics about the item that an describe it.   whether the ant is sleeping or awake.
+    Behaviour(Computer)                                                 Behaviour(ant)
+        Behaviour for a computer might be things like:                  For an ant,behaviour might be:
+            Booting                                                         Eating
+            Shutting down                                                   Drinking
+            Beeping or o/p something                                        Fighting
+            Drawing something on screen etc.                                Carrying food,those type of things.
+
+    Modelling real-world objects as software objects is a fundamental part of object oriented programming.
+    A software object stores its state in fields,which can also be called variables or attributes.
+    Objects expose their behaviour with methods which I've talked about before.So,Where does a class fit in?
+    well,think of class as a template or a blueprint for creating objects.
+
+The Class as the blueprint
+The class describes the data(fields),and the behavior(methods),that are relevant to the real-world object we want to describe.
+These are called class members.
+                                               Class
+                           Instance Members           Static Members
+                         Fields      Methods        Fields      Methods
+A class member can be a field or a method,or some other type of dependent element.
+If a field is static,there is only one copy in memory and this value is associated with the class or template itself.
+If a field is non-static,it's called an instance field,and each object may have a different value stored for this field.
+A static method can't be dependent on any one object's state,so it can't reference any instance members.
+In other words,any method that operates on instance fields needs to be non-static.
+These class or member fields can be thought of as variables,though it's more common to call them fields or attributes.
+public class Main {} -> it's a statement that describes a class in java.
+what benefit do classes give us in our everyday programming?
+well,think back to the basic data types that we've worked on,the primitive data types that we've exposed so far,such as int,
+short,float,double,boolean they are all basic data types and they're fairly limited.
+There's only so much you can do with them.
+A case could be made here that a class could be thought of as a powerful user-defined data type.That's not really correct in
+the true meaning,but it gives you an idea of what classes are.
+They really enable you to have sort of a powerful user-defined type,like a regular data type on steroids.
+To take this a little bit further,let's create our first real class.
+public class Car -> it's a statement to create a new class with the name car.The public keyword is an access modifier.
+This lets us determine what access others will have to this new class that we're creating.
+I haven't talked about how classes are organized
+Organizing Classes
+Classes can be organized into logical groupings which are called packages.
+You declare a package,the class implicitly belongs to the default package.
+You need to understand that classes are grouped into packages to understand access modifiers.
+Access Modifiers for the class
+A class is said to be a top-level class if it is defined in the source code file and not enclosed in the code block of another
+class,type or method.
+A top-level class has only two valid access modifier options:public or none.
+Access keyword                                          Description
+public                          Public means any other class in any package can access this class.
+                                When the modifier is omitted,this has special meaning,called package access,meaning the
+                                class is accessible only to classes in the same package.
+
+Access Modifiers for class members
+An access modifier at the member level allows granular control over class members.
+The valid access modifiers are shown in this table from the least restrictive to the most restrictive.
+Access Keyword                                              Description
+public                              public means any other class in any package can access this class.
+protected                           protected allows classes in the same package,and any subclasses in other packages,
+                                    to hav access to the member.
+                                    When the modifier is omitted,this has special meaning,called package access,meaning the
+                                    member is accessible only to classes in the same package.
+private                             private means that no other class can access this member.
+
+Why would we want to make all the fields on a class private?Doesn't this mean that nobody can access them?
+This practice has a name,encapsulation,and it's a key fundamental rule of Object Oriented Programming.
+
+Encapsulation
+Encapsulation in Object Oriented Programming usually has two meanings.
+    One is the bundling of behaviour and attributes on a single object.
+    The other is the practice of hiding fields and some methods from public access.
+In general,when we talk about encapsulation,we're talking about information hiding,or hiding the internal workings of a
+particular object.When we make our attributes private,we can then create methods to access the data,each with different degrees
+of access allowed,as needed.
+
+What is null?
+null is a special keyword in java,meaning the variable or attribute has a type but no reference to an object.
+This means that no instance or object is assigned to the variable or field.
+Fields with primitive data types are never null.
+
+Default Values of fields on classes
+Fields on classes are assigned default values automatically by java,if you don't assign value yourself.
+                    Data Type               Default value Assigned
+                    boolean                     false
+                    byte,short,int,long           0
+                    char
+                    double,float                  0.0
+
+What are getters and setters? Why should we use them?
+A getter is a method on a class that retrieves the value of a private field and returns it.
+A setter is a method on a class that sets the value of a private field.
+The purpose of these methods is to control and protect access to private fields.
+Another important aspect is that the getter and setter method signatures are part of car's public interface,but the field
+names and types aren't.This means that I can change things internally like the name or type of a field,but as long as we
+use the same getter and setter method,these changes should have no effect on external code that uses our class.Our internal
+changes are hidden from our users.
+A getter method usually just returns the value of a private field.It's usual to name a getter method with the get prefix,
+followed by the field name in lower camel case,but this is not required.you could have getter methods for fields that are
+not really declared on your class but that are derived in some way.
+A setter method may simply just assign the argument passed to the method,to the field,but it can contain code to validate
+data,check additional security requirements,ensure immutability of the field value,or any other code required to protect
+and validate an object's state.
+It's usual to name a setter method with the set prefix followed by the field name in lower camel case,but again it's a matter
+of form.
+There may be many cases where we don't have a setter method for a particular private field.May be this is data only needed within
+the class itself and doesn't need to be exposed to the outside world.
+
+this
+this is a special keyword in java.
+what is really refers to is the instance that was created when object was instantiated.
+So,this is a special reference name for the object or instance, which it can use to describe itself.
+And we can use this to access fields on the class.
+What is the advantage of using a setter method?
+if you see the setMake() -> I've build a rule that I'm supporting only 3 manufacturers and I'll enforce that rule so that
+if anything else is passed,I set make to "Unsupported".If the argument is null ,I set it to "Unknown".
+So,you can see how it's very useful to have validation functionality like this.what you can do with setter methods is set up
+all the rules related to that class,what is valid and what is not valid.you can have all the functionality set within the
+car class itself,so that these rules are in place as we're creating the object.What that means is,the code that's creating
+objects can't make invalid objects.In other words,it can't assign a make that I haven't defined as being valid in my car class.
+So that's the reason,and that's really the whole concept of encapsulation.Not allowing the people to access the field directly.
+we force them to go through a controlled way of setting up the data on the object.Using a setter method,we can really make
+sure that the data in our objects is valid data.
+
+let's talk about declaring variables using classes
+What is the difference between an uninitialized variable and a variable with null reference?
+An uninitialized variable causes a compile-time error.
+But a variable with a null reference can be used in code without compiler errors but will throw an exception at runtime.
+In both of these scenarios,I haven't created an object from car template,which of course is the class.The bottom line is to
+make sure when you're creating objects,that you always use the new and then include the name of the class,then follow it with
+parenthesis,and optionally any arguments in the parenthesis.
+So,you can see how the concept of User defined data type is coming back because I've introduced a super data type of type
+Car that has five fields:make model doors convertible color.But I've also assigned some methods to it as well.so both the
+state and behaviour are part of the class.
+
+Constructor
+A constructor is used in the creation of an object.
+It is a special type of code block that has a specific name and parameters,much like a method.
+It has the same name as the class itself,and it doesn't return any values.
+You can and should specify an appropriate access modifier to control who should be able to create new instances of the class
+using this constructor.
+public class Account{   //This is the class declaration.
+    public Account(){   //This is the constructor declaration.
+        //Constructor code is code to executed as the object is created.
+    }
+}
+The default constructor
+if a class contains no constructor declarations,then a default constructor is implicitly declared.
+This Constructor has no parameters and is often called the no-args(no arguments) constructor.
+If a class contains any other constructor declarations,then a default constructor is NOT implicitly declared.
+
+The purpose of the constructor is to essentially initialize the object that I'm creating and do whatever else I need to do
+while the object is being instantiated.it's only ever called once,at the start  ,when I'm creating the object.
+A class can have one or many constructors,one of which can be a no args constructor.
+
+Constructor Overloading
+Constructor overloading is declaring multiple constructors with different parameters.
+The number of parameters can be different between constructors or if the number of parameters is the same between two
+constructors,their types or order of the types must differ.
+
+Constructor chaining with this()
+Constructor chaining is when one constructor explicitly calls another overloaded constructor.
+You can only use constructor chaining,within constructors.
+You must use the special statement this() to execute another constructor,passing it arguments if required.
+And this() must be the first executable statement if it's used from another constructor.
+
+Constructor chaining is optional,means,it's not something you have to do,but there can be situations where you want to do this.
+One other thing to keep in mind when using constructor chaining is while you're using THIS to call another constructor is that
+you have to sure that it's the very first line that's executed in the constructor.
+
+Reference vs Object vs Instance vs Class
+    Let's use the analogy of building a house to understand classes.A class is basically a blueprint for the house.
+    Using the blueprint,we can build as many houses as we like,based on those plans.So thinking back to physical world,
+    we use the plans for the house,to build many houses that have the same floor plan.Each house we build(in other words
+    using the new operator) is an object.
+    This object can also be known as an instance,often we'll say it's an instance of the class.So we would have an instance
+    of house in this example.
+    Each house we build has an address(a physical location).In other words,if we want to tell someone where we live,we give
+    them our address(perhaps written on a piece of paper).This is known as reference.
+    We can copy that reference as many times as we like,but there is still just one house that we're referring to.
+    In other words,we're copying the paper that has the address on it,not the house itself.
+    We can pass references as parameters to constructors and methods.
+
+    public class House {                                 public class Main{
+    private String color;                                   public static void main(String[] args) {
+    public House(String color){                             House blueHouse = new House("blue");
+        this.color = color;                                 House anotherHouse = blueHouse;
+        }
+    public String getColor() {                              System.out.println(blueHouse.getColor()); //prints blue
+        return color;                                           System.out.println(anotherHouse.getColor());//blue
+    }
+                                                            anotherHouse.setColor("red");
+    public void setColor(String color){                     System.out.println(blueHouse.getColor());//red
+    this.color = color;                                     System.out.println(anotherHouse.getColor());//red
+    }
+}                                                           House greenHouse = new House("green");
+                                                            anotherHouse = greenHouse;
+                                                            System.out.println(blueHouse.getColor());//red
+                                                            System.out.println(greenHouse.getColor());//green
+                                                            System.out.println(anotherHouse.getColor());//green
+                                                           }
+                                                        }
+House blueHouse = new House("blue"); -> creates a new instance of the House class.Remember House is a blue print and we are
+assigned it to the blueHouse variable.In other words it is a reference to the object in memory.
+    **blueHouse** -> Object of type (House) , Color ( "blue" )
+House anotherHouse = blueHouse; -> creates another reference to the same object in memory.Here we have two references pointing
+to the same object in memory.There is still one house,but two references to that one object.In other words we have two
+pieces of paper with the physical address of where the house is built(going back to our real world example)
+    **blueHouse** -> Object of type (House) , Color ( "blue" ) <- **anotherHouse**
+2 println statements -> Both will print blue as both of them refer to the same object.
+anotherHouse.setColor("yellow");  -> you can see that both blueHouse and anotherHouse have the same color now.why?
+    Remember we have 2 references that point to the same object in memory.Once we change the color of one ,both
+    references still point to the same object.In our real world example,there is still just one physical house at that
+    one address,even though we have written the same address on two pieces of paper.
+    **blueHouse** -> Object of type (House) , Color ( "yellow" ) <- **anotherHouse**
+2 println statements -> Both will print yellow as both of them refer to the same object in memory.
+    **blueHouse** -> Object of type (House) , Color ( "blue" ) <- **anotherHouse**
+              **greenHouse** -> Object of type(House) ,Color("green")
+creates another new instance of the House class with the color set to "green".Now we have 2 objects in memory but we have
+    3 references which are blueHouse,anotherHouse and greenHouse.The variable(reference) greenHouse points to a different
+    object in memory,but blueHouse and anotherHouse point to the same object in memory.
+anotherHouse = greenHouse; -> we are dereferencing anotherHouse.it will now point to a different object in memory.Before it
+    was pointing to a house that had the "yellow" color,now it points to the house that has the "green" color.In this
+    scenario we still have three references and two objects in memory but blueHouse points to one object while anotherhouse
+    and greenHouse point to same object in memory.
+                         **blueHouse** -> Object of type (House) , Color ( "blue" )
+                  **greenHouse** -> Object of type(House) ,Color("green")<- **anotherHouse**
+
+In java you always have a reference to an object in memory.There is no way to access an object directly,everything is done
+using that reference.
+
+The reference vs The Object
+new House("red");                   //house object gets created in memory but we can't communicate with it.
+House myHouse = new House("beige"); //house object gets created in memory and it's location(reference) is assigned to myHouse.
+House redHouse = new House("red");  //house object gets created in memory and it's location(reference) is assigned to redHouse.
+//above code is not related to the first line. so overall 3 instances of house and 2 references.
+The first object will stay in memory,with no reference to it,until java's automatic process(garbage collector)figures out
+there is no running code with a reference to that object and deletes it.
+The first object is said to be eligible to garbage collection immediately after that first statement.it's no longer accessible.
+There are times we might want to instantiate an object,and immediately call a method on it and not immediately assign the object
+to a variable reference,and we'll show you some reasons later on this course.but 99% of time we want to reference the objects
+we create,so we'll immediately assign our new instance to a variable,creating a reference to communicate with it.
+
+
+

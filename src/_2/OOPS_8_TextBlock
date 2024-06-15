@@ -1,0 +1,4 @@
+What is a Text Block
+A text block is just a special format for multi-line String literals.
+it's simply a String,with a new representation in the source code.
+it became part of the official language as of JDK 15.

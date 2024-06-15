@@ -1,0 +1,108 @@
+this vs super
+The keyword super is used to access or call the parent class members(variables and methods)
+The keyword this is used to call the current class members(variables and methods)
+this is required,when we have a parameter with the same name,as an instance variable or field.
+NOTE: We can use either of them anywhere in a class,except for static elements,like a static method.Any attempt to do so there,
+will lead to compile time errors.
+Keyword this
+public class House {                                                The keyword this,is commonly used with constructors and
+    private String color;                                           setters,and optionally used in getters.
+    public House(String color){
+        //this keyword is required,same parameter name as field     In this example,we're using the this keyword in the
+        this.color = color;                                         constructor and setter,since there's a parameter with
+    }                                                               the same name,as the instance or field.
+    public String getColor() {                                      In the getter,we don't have any parameters,so there's
+        //this is optional                                          no conflict,so therefore the this keyword is optional there.
+        return color; //same as return this.color;
+    }
+    public void setColor(String color) {
+        //this keyword is required,same parameter name as field
+        this.color = color;
+    }
+}
+Keyword super                                                       The keyword super,is commonly used with method overriding,
+class Superclass {  //parent class aka super class                  when we call a method with the same name,from the parent
+    public void printMethod() {                                     class.
+        System.out.println("Printed in SuperClass.");               In this example,we have a method called printMethod,that
+    }                                                               calls super.printMethod.(else it'll be a recursive call)
+}
+class subclass extends SuperClass { //subclass aka child class
+    //overrides methods from the parent class
+    @Override
+    public void printMethod() {
+        super.printMethod(); //calls the method in the Superclass(parent)
+        System.out.println("Printed in SubClass.");
+    }
+}
+class MainClass {
+    public static void main(String[] args) {
+        subclass s = new subclass();
+        s.printMethod();
+    }
+}
+
+this() vs super() call
+In java we've go the this() and super() call.Notice the parenthesis.
+These are known as calls,since it looks like a regular method call,although we're calling certain constructors.
+use this() to call a constructor,from another overloaded constructor in the same class.
+The call to this() can only be used in a constructor,and it must be the first statement in a constructor.
+It's used with constructor chaining,in other words when one constructor calls another constructor,and it helps to reduce
+duplicated code.
+The only way to call a parent constructor,is by calling super(),which calls the parent constructor.
+The Java compiler puts a default call to super(),if we don't add it,and it's always a call to the no argument constructor,
+which is inserted by the compiler.
+The call to super() must be the first statement in each constructor.
+A constructor can have a call to super() or this(),but never both.
+
+Constructors Bad Example
+class Rectangle {
+    private int x,y,width,height;
+    public Rectangle() {          public Rectangle(int width,int height) {   public Rectangle(int x,int y,int width,int height) {
+        this.x = 0;                  this.x = 0;                                this.x = x;
+        this.y = 0;                  this.y = 0;                                this.y = y;
+        this.width = 0;              this.width = width;                        this.width = width;
+        this.height = 0;             this.height = height;                      this.height = height;
+    }                             }                                          }
+Here,we have 3 constructors.
+All three constructors initialize variables.
+There's repeated code in each constructor.
+We're initializing variables in each constructor, with some default values.
+You should never write constructors like this.let's look at the right way to do this by using this() call.
+Constructors Good Example
+class Rectangle {
+    private int x,y,width,height;
+    //1st constructor             // 2nd constructor                         // 3rd constructor
+    public Rectangle() {          public Rectangle(int width,int height) {   public Rectangle(int x,int y,int width,int height) {
+        this(0,0);                   this(0,0,width,height);                    this.x = x; // initialize variables
+        //calls 2nd constructor      //calls 3rd constructor                    this.y = y;
+    }                              }                                            this.width = width;
+                                                                                this.height = height;
+                                                                             }
+In this example, we still have 3 constructors.
+The 1st constructor calls the 2nd constructor,the 2nd constructor calls the 3rd constructor,and the 3rd constructor initializes
+the instance variables.
+The 3rd constructor does all the work.
+No matter what constructor we call, the variables will always be initialized in the 3rd constructor.
+This is known as constructor chaining,the last constructor has the responsibility to initialize the variables.
+
+super() call example
+class Shape {                                   In this example,we have a class Shape,with x and y variables,and a class
+    private int x,y;                            Rectangle that extends Shape,with variables width and height.
+    public Shape(int x,int y) {                 In the Rectangle class, the 1st constructor is calling the 2nd constructor.
+        this.x = x;                             The 2nd constructor calls the parent constructor,with parameters x and y.
+        this.y = y;                             The parent constructor will initialize the x and y variables,while the 2nd
+    }                                           Rectangle constructor will initialize the width and height variables.
+}                                               Here,we have both the super() and this() calls.
+class Rectangle extends Shape {
+    private int width,height;
+    //1st constructor
+    public Rectangle(int x,int y) {
+        this(x,y,0,0); //calls 2nd constructor
+    }
+    //2nd constructor
+    public Rectangle(int x,int y,int width,int height) {
+        super(x,y); //calls constructor from parent (Shape)
+        this.width = width;
+        this.height = height;
+    }
+}

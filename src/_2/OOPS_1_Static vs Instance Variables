@@ -1,0 +1,52 @@
+Static vs Instance Variables
+Static variables:
+Declared by using the keyword static.
+Static variables are also known as static member variables.
+Every instance of the class shares the same static variable.
+So if changes are made to that variable,all other instances of that class will see the effect of that change.
+it's considered best practice to use the class name and not the reference variable to access a static variable.
+class Dog{
+    static String genus = "canis";
+    void printData(){
+        Dog d = new Dog();
+        System.out.println(d.genus);    //Confusing!
+        System.out.println(Dog.genus);  //Clearer!
+       }
+}
+An instance isn't required to exist,to access the value of a static variable.
+class Dog{                                  class Main{
+    static String genus = "canis";              public static void main(String[] args){ //No instance of Dog needs to exist,
+}                                                   System.out.println(Dog.genus);  } //in order to access a static variable.
+                                                }
+Static variables aren't used very often,but can sometimes be very useful.
+They can be used for
+    Storing counters, Generating unique ids,
+    Storing a constant value that doesn't change,like PI for example.
+    creating and controlling access to a shared resource.
+Examples : a log file,a database or some other type of input or output stream.
+class Dog {                                                             public class Main{ psvm{
+    private static String name;                                             Dog rex = new Dog("rex"); //create instance(rex)
+    public Dog(String name){                                                Dog fluffy = new Dog("fluffy");// create instance(fluffy)
+        Dog.name = name;                                                    rex.printName(); //prints fluffy
+    }                                                                       fluffy.printName(); //prints fluffy
+    public void printName(){    //Using Dog.name would've               }}
+        System.out.println("name="+name);//made this code less confusing
+    }
+}This is a sample scenario where using static variables won't be a good idea.
+
+Instance Variables
+They don't use the static keyword.
+They're also known as fields or member variables.
+Instance variables belong to a specific instance of a class.
+Each instance has its own copy of an instance variable.
+Every instance can have a different value.
+Instance variables represent the state of a specific instance of a class.
+class Dog {                                                             public class Main{ psvm{
+    private String name;                                                    Dog rex = new Dog("rex"); //create instance(rex)
+    public Dog(String name){                                                Dog fluffy = new Dog("fluffy");// create instance(fluffy)
+        Dog.name = name;                                                    rex.printName(); //prints rex
+    }                                                                       fluffy.printName(); //prints fluffy
+    public void printName(){                                                }}
+        System.out.println("name="+name);
+    }
+}

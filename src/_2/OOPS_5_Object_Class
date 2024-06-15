@@ -1,0 +1,29 @@
+What is java.lang.object?
+    Inheritance looks kind of interesting,but when would we really use it?
+    Well,it turns out,in java,we've been using inheritance all along.
+    This is because every class you create in java,intrinsically extends a special java class.
+    This class is named Object,and it's in the java.lang package.
+    Ok that's confusing,a class called Object?
+    Let's see what java has to say about this class.
+    We'll use the link to Java's Application Programming Interface(API) for this class,which you can find in resource section
+
+    Class Object is the root of the class hierarchy.Every class has Object as a superclass.All objects,including arrays,
+    implement the methods of this class.Whether we knew it or not,your classes were extending this class,Object.
+    They all inherit from Object.And what that means is,all of your classes,have functionality built in that you can use or
+    override,the minute you create them.
+    Every Class inherits from Object
+                                                   Object
+                                                    clone():Object
+                                                    equals(obj:Object):boolean
+                                                    hashCode():int
+                                                    toString():String
+                    Main                                                    String
+              -------------------      This shows that our Main            ------------------------
+              static main              class inherits from,or is a         charAt(int,index):char
+                                       subclass of Object,as also is       ...
+                                       is String.                          equals(obj:Object):boolean
+                                       The String class has over 60        ...
+                                       methods                             toString():String
+                                       The String class overrides          ...
+                                       several methods on Object,two       static valueOf(Object obj):String
+                                       of which are equals(),and toString.

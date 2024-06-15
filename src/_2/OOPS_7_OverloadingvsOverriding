@@ -1,0 +1,107 @@
+Method Overloading
+    Method overloading means providing two or more separate methods,in a class,with the same name, but different parameters.
+    Method return type may or may not be different,and that allows us to reuse the same method name.
+    Overloading is very handy,it reduces duplicated code,and we don't have to remember multiple method names.
+    We can overload static,or instance methods.
+    To the code calling an overloaded method,it looks like a single method can be called,with different set of arguments.
+    In actuality, each call that's made with a different set of arguments,is calling a separate method.
+    Java developers often refer to method overloading,as compile-time polymorphism.
+    This means the compiler is determining the right method to call,based on the method name and argument list.
+    usually overloading happens within a single class.
+    But methods can also be overloaded by subclasses.
+    That's because,a subclass inherits one version of the method from the parent class, and then the subclass can have another
+    overloaded version of that method.
+
+Method Overloading Rules
+    Methods will be considered overloaded if both methods follow the following rules:
+        Methods must have the same method name.
+        Methods must have different parameters.
+    If methods follow the rules above:
+        They may or may not have different return types.
+        They may or may not have different access modifiers.
+        They may or may not throw different checked or unchecked exceptions.
+
+Method Overriding
+    Method overriding,means defining a method in a class,that already exists in the parent class, with the same signature(the
+    same name,same arguments).
+    By extending the parent class,the child class gets all the methods defined in the parent class(those methods are also known
+    as derived methods)
+    Method overriding is also known as Runtime Polymorphism,or Dynamic Method Dispatch,because the method that is going to be
+    called,is decided at runtime,by the Java Virtual machine.
+    When we override a method,it's recommended to put @Override,immediately above the method definition.
+    They @Override statement is not required,but it's a way to get the compiler to flag an error,if you don't actually properly
+    override this method.
+    We'll get an error,if we don't follow the overriding rules correctly.
+    We can't override static methods,only instance methods can be overridden.
+
+Method Overriding Rules
+    A method will be considered overridden, if we follow these rules.
+        It must have the same name and same arguments.
+        The return type can be a subclass of the return type in the parent class.
+        It can't have a lower access modifier.In other words,it can't have more restrictive access privileges.
+        For example,if the parent's method is protected,then using private in the child's overridden method is not allowed.
+However,using public for the child's method would be allowed,in this example.
+    There's also some important points about method overriding to keep in mind.
+        Only inherited methods can be overridden,in other words,methods can be overridden only in child classes.
+        Constructors and private methods cannot be overridden.
+        Methods that are final cannot be overridden.
+        A subclass can use super.methodName() to call the superclass version of an overridden method.
+Overriding                                              Overloading
+class Dog {                                             class Dog {
+    public void bark() { _______________                    public void bark() {------------------> same name different
+        System.out.println("woof");     |                       System.out.println("woof");             parameters
+    }                     ______________|___________        }                                               |
+}                         same name same parameters         public void bark(int number) {__________________|
+class GermanShepherd extends Dog {      |                       for(int i=0;i<number;i++) {
+    @Override                           |                           System.out.println("woof");
+    public void bark() {________________|                       }
+        System.out.println("woof woof woof");               }
+    }                                                   }
+}
+
+Method Overloading vs Method Overriding
+                    Method Overloading                                      Method Overriding
+    Provides functionality to reuse a method name with       Used to override a behaviour which the class has inherited from
+    different parameters.                                    the parent class.
+    Usually in a single class but may also be used in        Always in two classes that have a child-parent or IS-A relationship.
+    a child class.
+    Must have different parameters.                          Must have the same parameters and same name.
+    May have different return types.                         Must have the same return type or covariant return type(child class)
+    May have different access modifiers(private,public       Must Not have a lower modifier but may have a higher modifier.
+    protected).
+    May throw different exceptions.                          Must Not throw a new or broader checked exception.
+
+Covariant Return Type
+    The return type of an overridden method can be the same type as the parent method's declaration.
+    But it can also be a subclass.Why didn't we just say a return type could be the same class,or a subclass.
+        well,later we'll be dealing with other types,that aren't classes,and so the term covariant return type is more appropriate.
+    The term covariant type,can include types such as interfaces and generic types.
+    We briefly mentioned,in a previous video, that there's a clone method on the class object,that all classes inherit from.
+        protected Object clone() throws CloneNotSupportedException
+    if you overrode this method,by using intellij's code generation tools,it would generate this code in your class:
+        @Override
+        protected Object clone() throws CloneNotSupportedException {
+            return super.clone();
+        }
+    But in general,when you're cloning an instance,you're going to want to return an Object,that's the same type as the Object
+    you are cloning.
+    Remember,we said all classes ultimately have Object as a base class,so every class can be said to be covariant of Object.
+
+The clone method(generated by IntelliJ) override                The clone method overridden in a Person class.
+(from Object)                                                   This is a valid override of Object's clone method.
+@Override                                                       class Person {
+protected Object clone() throws CloneNotSupportedException {        private String name,birthDate;
+    return super.clone();                                           public Person(String name,String birthDate) {
+}                                                                       this.name = name;
+                                                                        this.birthDate = birthDate;
+                                                                    }
+                                                                    @Override
+                                                                    public Person clone() {
+                                                                        return new Person(name,birthDate);
+                                                                    }
+                                                                }
+    We've omitted the throws clause declaration,which is valid to do for an override,and also notice,that we're declaring
+    that the return type is a Person,not an Object.Person is a valid covariant return type for Object,so this clone method
+    is perfectly valid for overriding Object's clone method.
+    Notice also we made the access modifier public on the method in Person,though Object declared it as protected.it's valid
+    to go in this direction,meaning allowing the overriding method to have more access or be less restrictive.

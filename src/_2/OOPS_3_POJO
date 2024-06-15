@@ -1,0 +1,72 @@
+Plain Old Java Object
+    A plain Old Java Object(POJO) is a class that generally only has instance fields.
+    It's used to house data,and pass data,between functional classes.
+    It usually has few,if any methods other than getters and setters.
+    Many database frameworks use POJO's to read data from or to write data to databases files or streams.
+You remember that I said that a class can be thought of as super data type.A POJO is really just that.It lets you extend,
+and combine your definition of data types.A POJO also might be called a bean or a JavaBean.
+    A Java bean is a POJO with some rules applied to it.
+    These rules are in place,so that Java frameworks ,have a standard way to manipulate,and manage these objects.
+    A POJO is sometimes called an Entity,because it mirrors database entities.
+    Another acronym is DTO,for Data Transfer Object.it's a description of an object,that can be modeled as just data.
+    There are many generation tools,that will turn a data model into generated POJO's or JavaBeans.
+    You've seen an example of similar code generation in IntelliJ,which allowed us to generate getters,setters and constructors
+    in a uniform way.
+    Refer POJO.java
+
+Annotation
+Annotations are a type of metadata.
+Metadata is a way of formally describing additional information about our code.
+Annotations are more structured,and have more meaning,than comments.
+This is because they can be used by the compiler,or other types of pre-processing functions,to get information about the code.
+Metadata doesn't affect how the code runs,so this code will still run,with or without the annotation.
+@Override -> it's one of the commonly used annotations in java.
+it tells the compiler that it's a special type of method in java,an overridden method.
+Overridden Method:
+    An overridden method,is not the same thing as an overloaded method.
+    An overridden method is a special method in java,that other classes can implement,if they use a specified method signature.
+Boilerplate Code
+it's a code that's repetitive and follows a pattern,which is why code generation tools can create it for us.but it's still
+a lot of code to look at ,and we only have 4 fields in our pojo.wouldn't it be nice if we had a type that did all this for us
+and we didn't have to put all this code in our class.that's where the record came.
+
+The POJO vs The Record
+Previously we saw POJO and we saw that how it comes with a lot of boiler plate code.It's code that's repetitive and follows
+certain rules.
+Once Created,this code is rarely looked at or modified.In fact there are tools that'll just regenerate all of this code,if
+your underlying data or domain model changes.
+ The Record type
+    The record was introduced in jdk 14 and became a part of java in jdk 16.it's purpose is to replace the boilerplate code
+ of the POJO,but to be more restrictive.Java calls them "Plain data carriers".The word carriers is an important term because
+ it means the record has more rules built-in than a POJO would.
+    The record is a special class that contains data,that's not meant to be altered.
+    In other words,it seeks to achieve immutability,for the data in its members.
+    It contains only the most fundamental methods,such as constructors and accessors.
+    Best of all,you the developer,don't have to write or generate any of this code.
+    Also record doesn't support setter methods,but it supports other functionality like toString and getter,constructor.
+
+What does Java tell us about what is implicitly created,when we declare a record as we did in this code?
+    public record C_Record(String id,String name,String dateOfBirth,String classList){}
+    the part that's in parenthesis is called record header which consists of record components ,a comma delimited list of comp.
+    String id,String name,String dateOfBirth,String classList -> record header.
+    For each component in the header,Java generates,
+        A field with the same name and declared type as the record component.
+        The field is declared private and final.(means it can't be modified)
+        The field sometimes referred to as component field.
+        Java generates a toString method that prints out each attribute in a formatted String.
+        In addition to creating a private final field for each component,Java generates a public accessor method for each comp.
+        This method has the same name and type of the component,but it doesn't have any kind of special prefix,no get or is
+        for example.
+        The accessor method for id in this example is simply id().
+Why is the record built to be immutable?
+    There are more use cases for immutable data transfer objects,and keeping them well encapsulated.
+    You want to protect the data from unintended mutations.
+    if you want to modify data on your class,you won't be using the record.
+    You can use the code generation options for the POJO,as we showed in the earlier part.
+    But if you're reading a whole lot of records,from a database or file source,and simply passing this data around,then
+    the record is a big improvement.
+    When we talk about the final keyword,and immutability of data ,especially as it may be affected by concurrent threads,
+    we'll be revisiting this type.
+    we'll also be showing it to you in action,when we get to the database and IO sections of this course.
+
+

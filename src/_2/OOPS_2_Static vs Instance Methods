@@ -1,0 +1,40 @@
+Static Methods:
+    Static methods are declared using a static modifier.
+    Static methods can't access instance methods and instant variables directly.
+    They're usually used for operations that don't require any data from an instance of the class(from 'this').
+    If you remember,the this keyword is the current instance of a class.
+    Inside a static method,we can't use the this keyword.
+    Whenever you see a method that doesn't use instance variables,that method should probably be declared as a static method.
+    For example,main is a static method and it's called by the java virtual machine when it starts the java application.
+class Calculator{                               public class Main{
+    public static void printSum(int a,int b){       public static void main(String[] args){
+     System.out.println("sum= "+(a+b));            |     Calculator.printSum(5,10);                          |
+     }                                             |     printHello(); //shorter form of Main.printHello();  |
+}                                                   public static void printHello(){                    |
+static methods are called as ClassName.methodName();     System.out.println("Hello");                   |
+only if in the same class                                  }                                            |
+In this example Calculator.printSum(5,10); printHello();  }                                             |
+         |____________________________________________________________________________________________/
+
+Instance Methods
+Instance methods belong to an instance of a class.To use an instance method,we have to instantiate the class first,usually
+by using the new keyword.
+Instance methods can access instance methods and instance variables directly.
+Instance methods can also access static methods and static variables directly. -> what he meant by directly means we don't
+usually have to use the keyword THIS with the dot notation to use them and we don't have to use the class name with the
+dot notation to access static variables or methods,if the static variable or method is in the same class.Although doing so can
+help with clarity.
+class Dog{                                              public class Main{
+    public void bark(){                                     public static void main(String args[]){
+        System.out.println("woof");                             Dog rex = new Dog();     //create instance
+       }                                                        rex.bark();              //call instance method
+}
+The hard part here is to know when to create an instance or when to create a static method?Here are some basic rules that help
+                                        Should a method be static?
+                       Does it use any fields(instance variables) or instance methods?
+                                YES                                 NO
+            It should probably be an instance method     It should probably be a static method.
+we're asking these questions about the proposed method we plan to write,so if that's true then we'd want to make it an
+instance method.
+
+In upcoming sessions we'll see a class that's only has fields to store data.This is called Plain Old Java Object(POJO).

@@ -1,0 +1,50 @@
+What is inheritance and why is it so powerful?
+    we can look at inheritance as a form of code re-use.
+    it's a way to organize classes into a parent-child hierarchy,which lets the child inherit(re-use),fields and methods from
+    it's parent.
+    The animal kingdom with it's many classifications is a pretty good place to start looking at hierarchical relationships.
+                                                Animal
+                                              Vertebrates
+               warm-blooded                                                 cold-blooded
+        mammal              bird                                        fish            reptiles
+    Dog       cat                                               Salmon          Goldfish
+    Each box on this diagram represents a Class.
+    The most generic,or base class,starts at the top of the hierarchy.
+    Every class below it is a subclass.
+    So Animal is the base class.All the other classes can be said to be subclasses of Animal.
+    A parent can have multiple children,as we see with Mammal,which is the parent of Dog and Cat.
+    A child can only have one parent,in java.
+    But it will inherit from its parent class's parent and so on.
+extends
+    Using extends specifies the superclass(or the parent class) of the class we're declaring.
+    We can say Dog is a subclass,or child class,of Animal.
+    We can say Animal is a parent,or super class of Dog.
+    A class can specify one,only one ,class in its extends clause.
+super()
+    super() is a lot like this().
+    it's a way to call a constructor on the super class,directly from the sub class's constructor.
+    Like this(),it has to be the first statement of the constructor.
+    Because of that rule,this() and super() can never be called from the same constructor.
+    if you don't make a call to super(),then java makes it for you,using super's default constructor.
+    if your super class doesn't have a default constructor,then you must explicitly call super() in all of your constructors,
+    passing the right arguments to that constructor.
+Code Re-Use
+    All subclasses can execute methods,even though the code is declared on the parent class.
+    The code doesn't have to be duplicated in each subclass.
+    we can use code,from the parent.
+    or we can change that code for the subclass.
+    if you see ,we told the doAnimalStuff method that we're dealing with Animal class ,and we called the toString method
+    which is declared as a method on Animal.At run time,Java figures out the Animal Object is even more specific than Animal,
+    it's really a Dog,and it actually call the toString method on Dog(if one exists on Dog ,if doesn't exist on dog
+    that's no problem,because then it just uses the toString method on Animal,let's explore more on this...by makeNoise method).
+
+    Overriding a method
+    Overriding a method is when you create a method on a subclass,which has the same signature as a method on a super class.
+    You override a parent class method,when you want the child class to show different behaviour for that method.
+
+    Overridden method
+    The overridden method can do one of three things:
+        it can implement completely different behaviour,overriding the behavior of the parent.
+        it can simply call the parent class's method,which is somewhat redundant to do.
+        Or the method can call the parent class's method,and include other code to run,so it can extend the functionality for the
+        Dog,for that behavior.
