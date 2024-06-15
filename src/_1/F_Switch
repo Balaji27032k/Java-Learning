@@ -1,0 +1,37 @@
+Switch Statements
+Java provides a mechanism called the switch statement that lets us test if a variable matches a particular value and will then
+execute one or more lines of code if the check is true.
+Syntax for the Switch statement
+switch(value)
+{
+    case x:
+        //code for value == x
+        break;
+    case y:
+        //code for value == y
+        break;
+    default:
+        //code for value not equal to x or y
+}
+Valid Switch Value Types
+byte,short,int,char
+Byte,Short,Integer,Character
+String
+enum
+
+Invalid Switch Value Types
+long,float,double,boolean or their wrappers -> you'll get error if you try to use them.
+
+Fall through in switch statement
+ once a switch case label matches the switch variable ,no more cases are checked.
+ Any code after the case label where there was a match found,will be executed,until a break statement,or the end of the switch
+ statement occurs.
+ Without a break statement,execution will continue to fall through any case labels declared below the matching one and execute
+ each case's code.
+
+When you use yield in a switch
+your switch statement is being used as a switch expression returning a value.
+Your case label uses a code block,with opening and closing curly braces.
+
+This code                       =>      -> "1st";
+is implicitly translated to     =>      -> { yield "1st"; }

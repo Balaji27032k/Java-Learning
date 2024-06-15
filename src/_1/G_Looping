@@ -1,0 +1,48 @@
+Looping
+Looping lets us execute the code a multiple number of times.
+Java supports several statements for looping,or executing code repetitively.
+
+Java Supports 3 statements for looping
+
+for -> The for loop is more complex to set up but is commonly used when you are iterating over a set of values.
+while -> The while loop executes until a specified condition becomes false.
+do while -> the do while loop always executes at least one and continues until a specified condition becomes false.
+
+The for statement
+ It is often referred to as the for loop. It repeatedly loops something until a condition is satisfied.
+syntax
+    for(init;expression;increment)
+    {
+        //block of code
+    }
+These parts are all optional and consist of the following
+  The initialization section declares or sets state,usually declaring and initializing a loop variable,before the loop begins processing
+  The expression section,once it becomes false,will end the loop processing.
+  The increment section is executed after the expression is tested,and is generally the place where the loop variable is incremented.
+
+What if you want to loop until some condition is met,that's not associated with a known range of values?
+use while loop
+Java has 2 types of while loop
+while -> Continue executing code block until the loop expression becomes false.
+do while -> Execute the code block once,then continue executing until the loop condition becomes false.
+
+The while statement
+while(expression)
+{
+    //code
+}
+The do while statement
+do{
+    //Statements
+    }while(condition);
+
+Continue and Break
+The continue and break statements both interrupt normal loop processing.
+The continue statement in it's simplest form,will stop executing the current iteration of a block of code in a loop,and start a new iteration.
+The continue statement starts a new iteration but continues to iterate through the loop.
+The break statement exits the loop at the point it's executed,and no longer completes any code in the loop,and won't continue
+iterating any longer.
+
+The while and do while
+  the while loop checks the condition at the start,before executing the block.
+  compare that to the do while loop where the code is executed at least once,and then the condition is checked.

@@ -1,0 +1,102 @@
+Local Variables and scope
+So far we saw the switch statement,the for statement,the while statement as well as the do-while statement.All of these
+statements usually but not always have their own code blocks.
+
+Local Variable
+A local variable is called local because it is available for use by the code block in which it was declared.
+It is also available to code blocks that are contained by a declaring block.
+{   //starts on outer block - for example method block.
+    int firstVariable = 5;
+    int secondVariable = 10;
+    if(firstVariable > 0)       //flow statement block starts inner block
+    {
+        //inner block code has access to outer block's variables
+        System.out.println(secondVariable);
+    }
+}
+
+Scope
+Scope describes the accessibility of a variable.
+"In scope" means the variable can be used by an executing block or any nested blocks.
+"Out of scope" means the variable is no longer avaliable and cannot be used.
+
+When are Local Variables in Scope?
+Local Variables are always in scope in the block they are declared.
+They are also in scope for any nested blocks or blocks contained within the outer block. For Example : a method block can
+declare local variables and any flow statements contained in the method block will have access to the method's local variables.
+This is also true for the method parameters.Any code in the method and any nested blocks have access to the parameters.There
+is no limit to how deep you can nest code blocks,but generally,for readability and maintainability,consider replacing deeply
+nested blocks with method calls.
+
+When are Local Variables out of Scope?
+Local Variables are always out of scope for outer blocks or the containing blocks they are declared in.
+public static void aMethod(boolean aBoolean){
+    if(aBoolean){
+        int myCounter =10;          //myCounter is local to this if block
+    }
+    System.out.println(myCounter);  //myCounter is out of scope here
+}
+
+Scope Best Practices
+it is considered best practice:
+    To declare and initialize variables in the same place,if possible.
+    And to declare variables in the narrowest scope possible.(means if your variable is only used in the nested block declare
+    it there)
+
+Local Variables and the For Statement
+In this for statement,as part of the declaration,there is an initialization part,as i've described.
+In this case,I declared a variable,i,that isn't accessible outside of the loop.
+This is because any variables declared in the init section are local to the for loop,meaning they exist and are accessible
+in memory only while the loop is executing,and only to the loop code block.
+{   //Starts on outer block - for example a method block.
+    for(int i=1;i<=5;i++)   //i declared in for loop declaration
+    {
+        System.out.println(i);
+    }
+    System.out.println(i);      //Error : Out of scope
+}
+
+Declaring Variables in a if statement block
+Local variables declared in an if statement block are not accessible outside of that block.
+This also includes other parts of the if statement,like the else if block
+public static void aMethod(int counter){
+    if(counter > 0){
+        int i =10;
+    }
+    else{
+        System.out.println(i);  //Error : i is out of scope.
+    }
+    System.out.println(i);  //Error : i is out of scope.
+}
+
+Declaring Variables in a switch statement block
+However,the switch statement is different from the if-then-else statement blocks.
+public static void aMethod(int value){
+    switch(value){
+        case 1:
+                int i =10;
+                break;
+        default:
+            i=value;                //this is ok
+            System.out.println(i);  //this is ok
+            break;
+    }
+    System.out.println(i);  //Error : i is out of scope -> outside of the switch.
+}
+
+public static void aMethod(int value){
+    switch(value){
+        case 1:
+                System.out.println(i);  //this is not okay,i declared below.
+                break;
+        case 2:
+            `   int i = 10;
+                System.out.println(i);  //this is ok
+                break;
+        default:
+            i=value;                //this is ok
+            System.out.println(i);  //this is ok
+            break;
+    }
+    System.out.println(i);  //Error : i is out of scope -> outside of the switch.
+}

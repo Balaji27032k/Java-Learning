@@ -1,0 +1,53 @@
+Local variables are a way to store and manipulate temporary data.
+In addition to local variables,we can set up data to be defined and used as part of or an object.
+
+First,attributes on classes are another way to store data.
+Second,I want to introduce you to some static methods on the wrapper classes,which are classes we previously looked at.
+we haven't used any methods on these classes yet.
+These methods will help parse strings into numeric values.
+And finally,I want to introduce you to a special class for reading input,which I'll be using in the last part of this section
+to create an interactive program.
+
+A Class
+A class can be described as:
+    a custom data type.
+    a special code block that contains methods.
+    a class is like an empty form that gets copied and handed out
+    It describes information or placeholders for data that'll be filled in,when that form is given to a unique individual.
+    if the class has a field for name,then the object will have a value in the name field which will be unique to the object.
+    if the class has a field for address,then the object will have a value in the address field which will be unique to the object.
+    The process of copying that empty form and then delivering it to some process or person to fill in the blanks is a loose
+    analogy to what happens when you create an object.
+An Object
+An object is called an instance of a particular class.
+There is no limit to the number of objects you can create from a class.A class is sometimes compared to a cookie cutter, and
+the cookies are your objects.
+The class provides a shape or framework that describes the object being created.
+
+Declaring and Instantiating a new object from a class
+    The most common way to create an object is to use the new keyword.
+    The new keyword creates an instance of a class,and you can optionally pass data when creating that instance to setup data on
+    that object.
+    Looking at the String,it's actually a class.But it holds a special place in the java language,because we can create a String
+    just by using a literal which we've seen.
+    String s = "Hello";     -> String s = new String("Hello");
+
+Static and Instance Fields
+                    Static Field                                               Instance Field
+  Requires 'static' keyword when declared on the class.   Omits 'static' keyword when declared on the class.
+  Value of the field is stored in special memory          Value of the field is not allocated any memory and has no value
+  location and only in one place.                         until the object is created.
+  Value is accessed by ClassName.fieldname                Value is accessed by ObjectVariable.fieldname
+  Example : Integer.MAX_VALUE                             Example : myObject.myFieldName
+                                                            myObject -> variable name for an object we create
+                                                            myFieldName -> an attribute on the class.
+Static and Instance Methods
+                    Static Method                                               Instance Method
+  Requires 'static' keyword when declared on the class.   Omits 'static' keyword when declared on the class.
+  Method is accessed by ClassName.methodName              Value is accessed by ObjectVariable.methodName
+  Example : Integer.parseInt("123"));                     Example : "hello".toUpperCase();
+  A method called parseInt is called directly from the    A method is called toUpperCase is called on the instance of a
+  Class,Integer.                                          String with value  "hello".
+
+When we read data in from either a file or from user input,it's common for the data to be initially stored as String,which
+we'll need to convert to a numeric value.

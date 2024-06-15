@@ -1,0 +1,19 @@
+The Scanner Class
+The scanner class is described as a simple text scanner,which can parse primitive types and strings.
+To use the scanner class,we have to create an instance of Scanner.This means we're creating an object of type Scanner.We'll use
+new keyword for that.
+The new Keyword
+The new keyword is used in what java calls a class Instance Creation Expression.
+In it's simplest form ,it's the word new ,followed by the class name,and empty parenthesis.
+ClassName variableName = new ClassName();
+We can optionally pass arguments in those parenthesis,as we saw with methods.
+ClassName variableName = new ClassName(argument1,argument2);
+we saw that we could do this with the String class,passing the text in the parenthesis.
+Instantiating Scanner
+For reading input from the console or terminal,we instantiate a scanner object using new,followed by the Scanner class name,
+and passing System.in,as an argument,in the parenthesis.
+    Scanner sc = new Scanner(System.in);
+For reading input from a file,we instantiate a scanner object using new,again with the Scanner class name,but pass a File Object,
+as an argument ,in the parenthesis.
+    File is another class provided by Java,for reading and writing files.
+    Scanner sc = new Scanner(new File("nameOfFileOnFileSystem"));
