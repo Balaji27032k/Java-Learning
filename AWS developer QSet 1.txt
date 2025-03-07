@@ -1,0 +1,151 @@
+You've created a Lambda function that requires scheduled execution. What are the best methods to meet this requirement effectively?
+A)	
+Use Cloudtrail to schedule the Lambda function.
+B)	
+Use the schedule service in AWS Lambda.
+C)	
+Use an EC2 Instance to schedule the Lambda invocation.
+D)	
+Use Cloudwatch events to schedule the Lambda function.
+
+The engineers at EpicONE Games are determining the cache memory and node provisioning size for their AWS ElastiCache cluster to support high throughput, low latency, and approximately 35 to 45 million users per session for their upcoming war game. They have been advised to distribute the memory over more nodes with smaller capacities rather than using fewer nodes with larger capacities. With a requirement of 35 GB of cache memory for the cluster, one of the engineers has proposed several options. How would you assist the team in choosing the correct sizing from the proposed options?
+A)	
+The number of nodes in the cluster is not a key factor when it comes to cluster availability.
+B)	
+Use cache.t2.medium type of nodes with each having 3.22 GiB memory, 2 cores, and a quantity of 11 nodes giving 35.42 GiB in total meeting the requirement.
+C)	
+Start with one cache.m5.large node. Monitor memory usage, CPU utilization, and cache hit rate with ElastiCache metrics that further get published to CloudWatch. These metrics will enable monitoring of your clusters in the form CPU usage and cache gets and cache misses. These metrics will get measured and published for each Cache node in 60-second intervals. Based on the results, node and memory sizing can then be worked upon.
+D)	
+The node size does not impact the performance and fault tolerance at all. You could start with the t2 type of instances keeping the cost to a minimum and then add the nodes as the requirement increases.
+
+You have a launch template where a subnet is specified in its network interface. Now you need to use AWS CLI (aws autoscaling create-auto-scaling-group) to create an Auto Scaling group with the launch template. However, the ASG should be launched in another subnet that is different from the one specified in the launch template. How would you create the ASG with the AWS CLI command?
+A)	
+Create another launch template with the new subnet in its network interface. In AWS CLI (aws autoscaling create-auto-scaling-group), specify the same subnet through the --vpc-zone-identifier option.
+B)	
+Modify the subnet in the launch template and create the ASG using the latest version of the launch template.
+C)	
+Change the subnet in the launch template. In AWS CLI (aws autoscaling create-auto-scaling-group), specify the subnet through the --launch-template option.
+D)	
+Specify the subnet through the --vpc-zone-identifier option in AWS CLI (aws autoscaling create-auto-scaling-group). The subnet in the launch template is ignored.
+
+You have been assigned to manage the database administration for a web application where the database was initially created by a former DB admin. The manager has requested your assistance in implementing a new reporting feature that requires querying a DynamoDB table using attributes that are not designated as Partition Key and Sort Key. How would you recommend resolving this issue?
+A)	
+Edit the table and change the existing Partition and Sort Key to the required ones.
+B)	
+Clone the existing table and change the Partition and Sort Key during the table creation process.
+C)	
+Create a Local Secondary Index with required attributes as Partition and Sort Key.
+D)	
+Create Global Secondary Index and set required attributes as Partition and Sort Key.
+
+When working with a new HTTP based application on Amazon EC2 and DynamoDB, the AWS API is being utilized to retrieve service graph data. The Team Lead has recommended using the GetTraceSummaries API to obtain trace summaries. What flags can be used when retrieving traces with the GetTraceSummaries API? Choose two answers from the options listed below.
+A)	
+Event Time
+B)	
+UserId
+C)	
+Annotations
+D)	
+HTTPMethod
+E)	
+TraceID
+
+Consider deploying a mobile application for an eCommerce company that necessitates theme changes based on the device type. Android devices should display a green theme, while iOS devices should display a blue theme. It is recommended to utilize AWS Lambda for the mobile backend deployment. What is the most efficient way to achieve this?
+A)	
+Use the "event" object to determine which device invoked the function.
+B)	
+Use a REST client to pass device info to API Gateway that invokes AWS Lambda function.
+C)	
+Different environment variables for Android and iOS.
+D)	
+Use AWS Mobile SDK and use the "context" object.
+
+An engineering company seeks to acquire storage space through an Amazon S3 bucket to store its project documents. The data will be kept for an extended period, although the company is uncertain about the access pattern for this information. Which storage class would offer a cost-efficient solution without affecting performance?
+A)	
+S3 One Zone-IA
+B)	
+S3 Intelligent-Tiering
+C)	
+S3 Standard-IA
+D)	
+S3 Standard
+
+You are tasked with creating a serverless web application utilizing DynamoDB as the database. The client's requirement is to track all data changes in DynamoDB and save them as separate files on S3. How would you go about accomplishing this?
+A)	
+Use DynamoDB binary logging feature to record each and every change on S3.
+B)	
+Write a script that will record each and every create or update request and store it on S3.
+C)	
+Enable DynamoDB streams and attach them to Lambda which will read the data and store it on S3.
+D)	
+Enable DynamoDB streams and set the destination to S3. This will automatically store each change on S3.
+
+As a developer, you need to access resources in a different account. What is the most effective method to accomplish this task?
+A)	
+Create an IAM Role and attach it to an EC2 Instance.
+B)	
+Create a cross-account role and call the AssumeRole API.
+C)	
+Create a user in the destination account and share the password.
+D)	
+Create a user in the destination account and share the Access Keys.
+
+As a developer responsible for a containerized application, you have been instructed to configure dynamic port mapping for Amazon ECS and implement load balancing. What is the accurate statement regarding this scenario?
+A)	
+If dynamic port mapping is set up correctly, then you see the registered targets and the assigned port for the task.
+B)	
+Classic Load Balancer allows you to run multiple copies of a task on the same instance.
+C)	
+Application Load Balancer uses static port mapping on a container instance.
+D)	
+After creating an Amazon ECS service, you add the load balancer configuration.
+
+You have been brought on board by a company to work on their continuous development project. This project involves streaming data from different log sources onto Amazon Kinesis streams. Your task is to analyze real-time data using standard SQL. What options are available for achieving this goal?
+A)	
+Amazon EMR
+B)	
+Amazon Kinesis Firehose
+C)	
+Amazon Kinesis Data Analytics
+D)	
+Amazon Athena
+
+After creating a Lambda function and attempting to debug it post-execution, you insert print statements into the code to aid in the debugging process. However, upon checking Cloudwatch logs, you discover that there are no logs for the Lambda function. What might be the root cause of this issue?
+A)	
+There is not enough time assigned to the function.
+B)	
+You've not enabled versioning for the Lambda function.
+C)	
+The IAM role needed for the lambda function to write the logs to Cloudwatch logs does not have the necessary permissions.
+D)	
+There is not enough memory assigned to the function.
+
+You are working on a REST API and need to pass client-submitted method requests directly to a Lambda function. Which integration type should you set for this requirement?
+A)	
+"type": "mock"
+B)	
+"type": "aws_proxy"
+C)	
+"type": "aws"
+D)	
+"type": "http_proxy"
+
+Your team is in the process of developing an application, and it is necessary to implement an Amazon Elastic File System (EFS) to facilitate data sharing among various nodes. In order to ensure security within the EFS file system, it is essential to establish a policy that enforces specific default security rules. For instance, disabling root access and mandating the use of TLS for connections from EFS clients are among the requirements. What would be the most appropriate approach to achieve this?
+A)	
+Add the TLS option when mounting the file system with the EFS mount helper.
+B)	
+Attach an IAM identity policy to each IAM entity to perform specific actions on the file system.
+C)	
+Configure an EFS file system policy to control NFS client access to the EFS resource.
+D)	
+Create an EFS service-linked role and attach it to the file system.
+
+Throughout the process of developing, defining, and deploying a backend for your project, it is essential to carefully consider the utilization of user and identity pools within the context of a serverless application. Which assertions hold true in this particular situation?
+A)	
+User pools are for authorization (access control) which is fully managed on your behalf.
+B)	
+User pools support temporary, limited-privilege AWS credentials to access other AWS services while Identity pools provide sign-up and sign-in services.
+C)	
+User pools help you track user device, location, and IP address while Identity pools help you generate temporary AWS credentials for unauthenticated users.
+D)	
+User pools give your users access to AWS resources.
