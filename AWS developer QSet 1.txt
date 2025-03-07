@@ -149,3 +149,253 @@ C)
 User pools help you track user device, location, and IP address while Identity pools help you generate temporary AWS credentials for unauthenticated users.
 D)	
 User pools give your users access to AWS resources.
+---------------------------------------------------------------------------------------------------------------------------------------
+When creating an application, it is advisable to incorporate MFA and password recovery as extra measures to enhance security through the implementation of dual authentication and recovery processes. What is the best approach to take in this situation?
+A)	
+Use SMS as a second factor and TOTP along with a security key as the MFA device for your IAM and root users.
+B)	
+Use TOTP as a second factor and SMS as a password recovery mechanism which is disjoint from an authentication factor.
+C)	
+Enable MFA as Required immediately after creating a user pool to add another layer of security.
+D)	
+Disable adaptive authentication, so you can configure a second factor authentication in response to an increased risk level.
+
+Which of the next options could you use as MFA in Cognito? Choose two answers from the options listed below.
+A)	
+SES
+B)	
+Google Authenticator
+C)	
+Cognito Identity Pool
+D)	
+SMS text message with MFA code
+
+As an API developer for a major manufacturing company, you have created an API resource that enables the addition of new products to the distributor's inventory through a POST HTTP request. This resource includes an Origin header and accepts application/x-www-form-encoded as the request content type. What response header should be used to grant access to this resource from a different origin?
+A)	
+All of the below
+B)	
+Access-Control-Allow-Origin
+C)	
+Access-Control-Request-Method
+D)	
+Access-Control-Request-Headers
+
+You have created a series of scripts utilizing AWS Lambda. These scripts require access to EC2 Instances within a VPC. What steps should be taken to guarantee that the AWS Lambda function can reach the resources in the VPC? Choose two answers from the options listed below.
+A)	
+Ensure that the VPC Flow Log IDs are configured in the Lambda function.
+B)	
+Ensure that the subnet IDs are configured in the Lambda function.
+C)	
+Ensure that the NACL IDs are configured in the Lambda function.
+D)	
+Ensure that the Security Group IDs are configured in the Lambda function.
+
+You are creating a Lambda function in your Dev1 account with the goal of saving QR codes in two S3 buckets. One bucket (BucketDev1) is in the same account as the Lambda, while the second bucket (BucketDev2) is in another AWS account called Dev2. The requirement is to restrict access to only allow this specific Lambda from Dev1 to create objects in BucketDev2. What permissions are needed to grant access to this Lambda function for both S3 buckets?
+A)	
+Create two policies, the first one allows Lambda to create objects in BucketDev1 and the second, allows Lambda to create objects in BucketDev2. Create an IAM role with these two policies and attach it to the Lambda.
+B)	
+Create a role called S3-Lambda with a policy that allows to create objects in any S3 bucket and attach it to the Lambda, create in BucketDev1 a bucket policy that only allows resources with the S3-Lambda role to write in BucketDev1.
+C)	
+Create a role called S3-Lambda with a policy that allows to create objects in any S3 bucket and attach it to the Lambda, create in BucketDev2 a bucket policy that allows resources with the S3-Lambda role from Dev1 account to write in BucketDev2.
+D)	
+Create a role called S3-Lambda with a policy that allows you to write in BucketDev1 and BucketDev2 and attach it to the Lambda. Create in BucketDev2 a bucket policy with two statements. The first statement denies all resources with the S3-Lambda role of Dev1 account to write in any S3 bucket, the second statement allows the specified Lambda from Dev1 account to write in the specified bucket in dev2 account.
+
+What can be specified to provide the Linux user from the third-party software firm with the minimum access permissions required to execute dependencies before the build phase of the new application deployment for your firm?
+A)	
+Specify run-as at the top of pre_build command of phases block.
+B)	
+Specify run-as for each command in the env block.
+C)	
+Specify run-as at the top of build command of phases block.
+D)	
+Specify run-as at the top of the buildspec file.
+
+You possess a VPC with a subnet containing an AWS RDS instance. Your supervisor has requested that you begin monitoring all changes made to its data by applications. You opt to utilize a Lambda function for this purpose. However, you must grant the function access to the VPC. How do you plan to accomplish this?
+A)	
+Create a Role to allow access between Lambda and VPC.
+B)	
+Create a Role to allow access between Lambda and RDS.
+C)	
+Create a Policy and a Role to allow access between Lambda and RDS.
+D)	
+Create a Role to allow access between Lambda and the subnet.
+
+You are developing an application using AWS Lambda, where a Lambda function is placed in a private subnet without internet access. This Lambda function will receive bank account information as a JSON object (about 7 KB in size). To satisfy the requirement of encrypting this information before saving it to DynamoDB, which approach should you use?
+A)	
+Generate a new Customer Master Key. Encrypt the JSON data with the encrypt() KMS method using the CMS previously generated. Upload the encrypted data to DynamoDB.
+B)	
+Create a VPC Endpoint in the Lambda VPC for the KMS Service. Generate a new Customer Master Key. Encrypt the JSON data using KMS Envelope Encryption. Upload the encrypted data to DynamoDB.
+C)	
+Generate a new Customer Master Key. Encrypt the JSON data using KMS Envelope Encryption. Upload the encrypted data to DynamoDB.
+D)	
+Create a VPC Endpoint in the Lambda VPC for the KMS Service. Generate a new Customer Master Key. Encrypt the JSON data with the encrypt() KMS method using the CMS previously generated. Upload the encrypted data to DynamoDB.
+
+A Junior Engineer is setting up the AWS X-Ray daemon to run locally on a multi-vendor operating system environment. He is worried about the configuration of the listening port for this particular situation. What is the accurate statement regarding the listening port for the AWS X-Ray Daemon?
+A)	
+AWS X-Ray Daemon Listening Port is default as 2000 and cannot be changed.
+B)	
+AWS X-Ray Daemon Listening Port can be changed only for the Linux environment.
+C)	
+AWS X-Ray Daemon Listening Port cannot be changed while running the daemon locally.
+D)	
+AWS X-Ray Daemon Listening Port can be changed using --bind command with CLI.
+
+As a team lead in your company, you have been tasked with overseeing the Blue Green Deployment methodology for a specific application. What are some of the strategies that can be utilized to effectively implement this methodology? Choose two answers from the options listed below.
+A)	
+Using Elastic Beanstalk with the swap URL feature
+B)	
+Using Autoscaling Groups to scale on demands for both deployments
+C)	
+Using Route 53 with Weighted Routing policies
+D)	
+Using Route 53 with Latency Routing policies
+
+A well-known supplier of online learning platforms, with more than 300 microservices hosting its 500+ courses, is facing bottlenecks that cause server errors due to timeouts and high CPU consumption during the JSON decentralization process, which is used for application interactions. Manual code reviews are becoming excessively time-consuming and labor-intensive. Could you please choose the appropriate option from the list below to fix the high CPU utilization, performance deterioration, and application communication latencies?
+A)	
+Upgrade the backend EC2 Instance family to the latest Amazon EC2 M5 type of instances providing 25 Gbps of network bandwidth using enhanced networking.
+B)	
+Migrate the entire workload to AWS Elastic Kubernetes Services resulting in increased performance, automatic scaling and applications availability.
+C)	
+Move the code to a Test environment and Integrate Amazon CodeReview Profiler to evaluate the performance of JSON code and native object serialization.
+D)	
+Change the Application Load balance to Network Load balancer adding more listeners.
+
+You possess a SAM template for deploying a Lambda function, and you are currently in the process of developing a new version. Your supervisor has requested that you promptly redirect traffic once the new version has been built and tested. What is the most effective, seamless, and straightforward method to accomplish this task?
+A)	
+Set AutoPublishAlias property of the function resource.
+B)	
+Use Qualifiers in the Management Console to select the version which you built and tested.
+C)	
+Point an alias, PROD to the version which you built and tested.
+D)	
+Set DeploymentPreference property of the function resource.
+
+You are currently engaged in a new project that requires the development of Lambda functions for a Serverless Web Application. A substantial team of developers will be collaborating on this project, making various modifications to the Lambda function code. It is recommended that you adhere to best practices by releasing a version when either creating a Lambda function or updating its code. What statement accurately describes the published version of a Lambda Function?
+A)	
+A published version is a snapshot of function code and configuration that can't be changed.
+B)	
+A published version is a snapshot of function code and has the same version number when a previous version is deleted and recreated.
+C)	
+A published version is a snapshot of function code and has a unique Amazon Resource Name that can be updated using "UpdateFunctionCode".
+D)	
+A published version is a snapshot of function code and configuration that can be updated using the "Publish" parameter.
+
+The Development Team has effectively implemented a new application on the Amazon EC2 instance in the us-west-2 region. They now require your assistance in deploying the same application on Amazon EC2 instances in other regions. Specifically, they need support in deploying EC2 instances with images created from instances in the us-west-2 region, while ensuring that the latest security patches are applied. What would be the most appropriate action to meet this requirement?
+A)	
+Use EC2 Image Builder to create images with the latest patches.
+B)	
+Create a snapshot of an image and deploy it in all other EC2 instances.
+C)	
+Build automated scripts to create updated images with the latest patches.
+D)	
+Manually create EC2 image with the latest patches.
+
+The development team is currently strategizing the migration of an on-premise data store to AWS DynamoDB. The previous database had defined triggers for updating existing items. What is the simplest method to replicate this functionality in DynamoDB after the migration?
+A)	
+Define SQS topics in response to events from DynamoDB Streams.
+B)	
+Define triggers in DynamoDB for each table.
+C)	
+Define Lambda functions in response to events from DynamoDB Streams.
+D)	
+Define SNS topics in response to events from DynamoDB Streams.
+
+You work as a developer for a firm that has created a serverless application enabling users to do online payment transactions. The apps comprise multiple Lambda functions and a DynamoDB table. This is accomplished with a SAM template. Nevertheless, individuals are unable to access their transaction history or modify their payment details. Upon troubleshooting, it is shown that the Lambda functions lack the necessary rights to retrieve data from the DynamoDB table. How would you address this problem by implementing a more strict and secure AWS Managed Policy?
+A)	
+Create an IAM role using AWS Managed Policy AmazonDynamoDBReadOnlyAccess and attach to Lambda functions.
+B)	
+Create an IAM role using AWS Managed Policy AmazonDynamoDBFullAccess and attach to Lambda functions.
+C)	
+Use AmazonDynamoDBFullAccess policy template in the SAM template.
+D)	
+Use DynamoDBCrudPolicy policy template in the SAM template.
+
+As the team lead for an application, you have been tasked with utilizing Jenkins as the Build provider in AWS CodePipeline. What is considered the best practice in this scenario?
+A)	
+Install Jenkins on a Lambda function so that it is serverless and cost-effective.
+B)	
+Install Jenkins on an EC2 instance and make sure the instance role has the "codepipeline" permission.
+C)	
+Add Access Keys in EC2 for the Jenkins server to access CodePipeline.
+D)	
+Install Jenkins on an Amazon EC2 instance. Make sure the instance profile grants Jenkins, only the AWS permissions required to perform tasks for your project.
+
+You intend to utilize the AWS CodeDeploy tool for deploying your application. What is used to define the deployment process to the underlying instances?
+A)	
+appspec.yml
+B)	
+appConfig.json
+C)	
+DeploymentGroup
+D)	
+appConfig.YAML
+
+A corporation is utilizing a DynamoDB table in their application. It is now necessary to guarantee that all modifications made to the elements in the table are documented and saved in a MySQL database. Which of the following would ideally be one of the measures for implementing the plan?
+A)	
+Enable DynamoDB triggers
+B)	
+Enable DynamoDB Accelerator
+C)	
+Enable DynamoDB global tables
+D)	
+Enable DynamoDB streams
+
+You have recently set up a Lambda function that is located behind the API gateway service. Upon attempting to call the Lambda function through the API gateway service from JavaScript in your HTML page, you encounter the following issue: "No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access." What steps can be taken to fix this problem?
+A)	
+Change the IAM policy for the API gateway to enable anonymous access.
+B)	
+Enable CORS for the lambda function.
+C)	
+Enable CORS for the methods in the API gateway.
+D)	
+Change the IAM policy for the Lambda function to enable anonymous access.
+
+As a newly appointed Database administrator at a start-up, your initial responsibility involves adjusting a DynamoDB table to automatically expire data after a specific timeframe. Upon reviewing the documentation, you discovered that DynamoDB offers a Time to Live (TTL) feature that enables this functionality. What steps should be taken to implement this feature?
+A)	
+It is by default enabled and will automatically pick a key attribute with timestamp value.
+B)	
+Enable TTL and use the dataExpiry keyword as a key attribute to store the expiry timestamp.
+C)	
+Enable TTL and use any name of your choice as a key attribute to store the expiry timestamp.
+D)	
+Enable TTL and use the keyword expiryTTL as a key attribute to store the expiry timestamp.
+
+Your client's web application is hosted on-prem and has recently shifted its database service to DynamoDB. The application is experiencing over 1000 read requests per second and around 200 write requests per second. Your client has requested the implementation of a caching mechanism to enhance the speed of read requests and reduce costs on RCUs. What modifications are necessary to achieve this?
+A)	
+None of the below.
+B)	
+Create an ElastiCache redis cluster and configure your application to write the most frequently accessed data to redis for faster read queries.
+C)	
+Place DynamoDB accelerator in front of the database to cache frequently accessed data.
+D)	
+Place an ElastiCache Memcached cluster in front of DynamoDB to cache the requests.
+
+Your stock market trading application sends real-time data to AWS Kinesis, which is then processed and sorted by a Lambda function before being saved to a DynamoDB table. Customers access this table through a dashboard. Upon market opening, customers report missing data. Which Lambda CloudWatch metric should you prioritize to address this issue?
+A)	
+IteratorAge
+B)	
+Throttles
+C)	
+Dwell time
+D)	
+ConcurrentExecutions
+
+The financial institute has chosen to store its important documents in an Amazon S3 bucket with versioning enabled. Despite applying a retention period using object lock, there are instances where certain objects are being overwritten. What could be a potential cause for this issue?
+A)	
+Object locks need to apply to all versions of the objects in a versioned bucket.
+B)	
+Object should have both retention period and legal hold to prevent from overwriting.
+C)	
+Object locks apply to a specific version of an object in a versioned bucket.
+D)	
+Object lock should be applied at bucket level to prevent all objects in a bucket from overwriting.
+
+What are the potential issues with the requests that are causing some of the request results to return an HTTP 4xx status code while developing an application that works with a DynamoDB table? Choose two answers from the options listed below.
+A)	
+There are network issues.
+B)	
+There are missing required parameters with some of the requests.
+C)	
+You are exceeding the table's provisioned throughput.
+D)	
+The DynamoDB service is unavailable.
