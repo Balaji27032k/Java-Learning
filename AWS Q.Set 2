@@ -1,0 +1,370 @@
+1) Your current log analysis application takes over four hours to generate a report of the top 10 users of your web application. You need to implement a system that can provide this information in real-time, ensure the report is always up-to-date, and handle increases in the number of requests to your web application. Which cost-effective option would you choose to fulfill these requirements?
+A) 
+Create a multi-AZ Amazon RDS MySQL cluster, post the logging data to MySQL, and run a map reduce job to retrieve the required information on user counts.
+B) 
+Publish your data to CloudWatch Logs, and configure your application to Autoscale to handle the load on demand.
+C) 
+Publish your log data to an Amazon S3 bucket. Use AWS CloudFormation to create an Auto Scaling group to scale your post-processing application which is configured to pull down your log files stored an Amazon S3.
+D) 
+Post your log data to an Amazon Kinesis data stream, and subscribe your log-processing application so that is configured to process your logging data.
+2) The Development Team at a gaming application company must test new gaming apps on different EC2 instances with various OS platforms. In order to prevent delays in setting up these EC2 instances, the IT department has chosen to launch some instances with all necessary application components and then hibernate them. The Accounts Team is worried about the expenses associated with these hibernated EC2 instances. What accurately describes the charges for an EC2 instance in a hibernation state?
+A) 
+Instance charges per second for duration of hibernation and EBS storage charges
+B) 
+EBS storage charges and Elastic IP Address charges attached to Instance
+C) 
+Instance charges per second for duration of hibernation and S3 storage charges for data copied from Instance to S3 bucket
+D) 
+S3 Storage charges and Elastic IP Address charges attached to Instance
+3) When working with a new HTTP based application on Amazon EC2 and DynamoDB, the AWS API is being utilized to retrieve service graph data. The Team Lead has recommended using the GetTraceSummaries API to obtain trace summaries. What flags can be used when retrieving traces with the GetTraceSummaries API? Choose two answers from the options listed below.
+A) 
+Event Time
+B) 
+UserId
+C) 
+Annotations
+D) 
+HTTPMethod
+E) 
+TraceID
+4) You have been assigned to manage the database administration for a web application where the database was initially created by a former DB admin. The manager has requested your assistance in implementing a new reporting feature that requires querying a DynamoDB table using attributes that are not designated as Partition Key and Sort Key. How would you recommend resolving this issue?
+A)	
+Edit the table and change the existing Partition and Sort Key to the required ones.
+B)	
+Clone the existing table and change the Partition and Sort Key during the table creation process.
+C)	
+Create a Local Secondary Index with required attributes as Partition and Sort Key.
+D)	
+Create Global Secondary Index and set required attributes as Partition and Sort Key.
+5) The development team is currently working on an event-driven application that requires processing of data stored in the Amazon S3 bucket and sending notifications to multiple subscribers through Amazon SNS. As a result, a single topic is established in Amazon SNS, and messages are distributed to various Amazon SQS queues that are subscribed to this topic. What is the accurate statement regarding the messages sent to the Amazon SQS queue?
+A) 
+Messages sent to the topic will be visible to the queue, once processing of the message is completed by the first queue.
+B) 
+Each Queue will receive an identical message sent to that topic instantaneously.
+C) 
+Message sent to the topic will be evenly distributed among all the queues which have subscribed to this topic.
+D) 
+Each Queue will receive a message sent to that topic asynchronously with a time delay.
+6) You are planning to deploy a serverless application using AWS CodeDeploy with the AWS Lambda compute platform and will be creating an AppSpec file in YAML format. What properties should be specified in the resources section of the AppSpec file to define additional properties for a Lambda function? Choose three answers from the options listed below.
+A) 
+Currentversion
+B) 
+Name
+C) 
+TaskDefinition
+D) 
+Port
+E) 
+Targetversion
+7) The development team is currently in the process of designing a new distributed application. A majority of the messages exchanged between the application components exceed 256 KB in size. These messages must be regularly polled and buffered to allow other components to access and process them. Which service would you employ to architect the messaging system?
+A) 
+Use Amazon MQ FIFO
+B) 
+Use Amazon Kinesis Streams
+C)	
+Use Amazon SNS Extended Client Library
+D)	
+Use Amazon SQS Extended Client Library
+8) You are tasked with creating a serverless web application utilizing DynamoDB as the database. The client's requirement is to track all data changes in DynamoDB and save them as separate files on S3. How would you go about accomplishing this?
+A) 
+Use DynamoDB binary logging feature to record each and every change on S3.
+B) 
+Write a script that will record each and every create or update request and store it on S3.
+C) 
+Enable DynamoDB streams and attach them to Lambda which will read the data and store it on S3.
+D) 
+Enable DynamoDB streams and set the destination to S3. This will automatically store each change on S3.
+9) As you build an application on AWS using Microservices architecture, the Microservices will be implemented through AWS Lambda functions. Given the intricate nature of the component's interactions, it is crucial to establish a method for orchestrating the execution flow of the Lambda functions. How can you efficiently manage this process both currently and for future integration of additional Lambda functions into the application?
+A)	
+Consider using SQS queues to coordinate the execution of the other Lambda functions.
+B)	
+Consider creating a master Lambda function that would coordinate the execution of the other Lambda functions.
+C)	
+Consider creating a separate application hosted on an EC2 Instance which would coordinate the execution of the other Lambda functions.
+D)	
+Consider using Step Functions to coordinate the execution of the other Lambda functions.
+
+10) The engineers at EpicONE Games are determining the cache memory and node provisioning size for their AWS ElastiCache cluster to support high throughput, low latency, and approximately 35 to 45 million users per session for their upcoming war game. They have been advised to distribute the memory over more nodes with smaller capacities rather than using fewer nodes with larger capacities. With a requirement of 35 GB of cache memory for the cluster, one of the engineers has proposed several options. How would you assist the team in choosing the correct sizing from the proposed options?
+A) 
+The number of nodes in the cluster is not a key factor when it comes to cluster availability.
+B) 
+Use cache.t2.medium type of nodes with each having 3.22 GiB memory, 2 cores, and a quantity of 11 nodes giving 35.42 GiB in total meeting the requirement.
+C)	
+Start with one cache.m5.large node. Monitor memory usage, CPU utilization, and cache hit rate with ElastiCache metrics that further get published to CloudWatch. These metrics will enable monitoring of your clusters in the form CPU usage and cache gets and cache misses. These metrics will get measured and published for each Cache node in 60-second intervals. Based on the results, node and memory sizing can then be worked upon.
+D)	
+The node size does not impact the performance and fault tolerance at all. You could start with the t2 type of instances keeping the cost to a minimum and then add the nodes as the requirement increases.
+11) As a developer responsible for a containerized application, you have been instructed to configure dynamic port mapping for Amazon ECS and implement load balancing. What is the accurate statement regarding this scenario?
+A) 
+If dynamic port mapping is set up correctly, then you see the registered targets and the assigned port for the task.
+B) 
+Classic Load Balancer allows you to run multiple copies of a task on the same instance.
+C) 
+Application Load Balancer uses static port mapping on a container instance.
+D) 
+After creating an Amazon ECS service, you add the load balancer configuration.
+12) A distributed web application utilizes multiple Amazon SQS standard and FIFO queues established in different AWS regions. In addition, a Dead-letter queue needs to be created to isolate and troubleshoot problematic messages. Which of the following statements is correct when creating a dead-letter queue? Choose three answers from the options listed below.
+A) 
+Dead-Letter queue and FIFO queue can reside in any AWS region.
+B) 
+For the FIFO queue, FIFO Dead Letter queue should be created.
+C) 
+For Standard queue, FIFO or Standard Dead-Letter queue can be created.
+D) 
+Use the same AWS Account to create Dead-Letter and standard queue.
+E) 
+Dead-Letter queue and Standard queue should reside in the same AWS region.
+13) A microservice application is developed using AWS Lambda functions that are invoked by a non-instrumented service. To optimize performance and integrate AWS X-Ray for tracing across multiple services, what should a developer do when the non-instrumented service invokes an AWS Lambda function?
+A) 
+AWS Lambda functions invoked by non-instrumented services do not support tracing.
+B) 
+For non-instrumented services, AWS Lambda records trace without any additional configuration.
+C) 
+Enable Start tracing under AWS Lambda Function configuration.
+D) 
+Enable Active tracing under AWS Lambda Function configuration.
+14) Your organization is presently storing its items in S3. The existing rate of requests is approximately 11000 GET requests per second. A new requirement has been introduced for objects to be encrypted while at rest. Consequently, encryption using KMS has been activated. However, performance problems are now arising. What might be the primary cause of this issue?
+A) 
+You need to also enable CORS to ensure optimal performance.
+B) 
+Amazon S3 will now throttle the requests since they are now being encrypted using KMS.
+C) 
+You need to also enable versioning to ensure optimal performance.
+D) 
+You are now exceeding the throttle limits for KMS API calls.
+15) Which of the next options could you use as MFA in Cognito? Choose two answers from the options listed below.
+A) 
+SES
+B) 
+Google Authenticator
+C) 
+Cognito Identity Pool
+D) 
+SMS text message with MFA code
+16) When developing an application to be hosted in AWS Lambda that will make calls to a database, it is crucial to ensure that all database connection strings are kept secure. What is the most secure way to implement this requirement?
+A) 
+Place the database connection string in the AWS Lambda function itself since all Lambda functions are encrypted at rest.
+B) 
+Put the connection strings values in a CloudFormation template.
+C) 
+Put the database connection string in the app.json file and store it in a Git repository.
+D) 
+Lambda needs to reference the AWS Systems Manager Parameter Store for the encrypted database connection string.
+17) The AWS accounts within your organization are administered through AWS Organizations and Organizational Units (OUs). Within a specific AWS account, there exists an S3 bucket housing confidential files. Access to the objects within the S3 bucket should be restricted solely to AWS accounts belonging to a particular OU within your Organization. What is the simplest approach to meet this criteria?
+A) 
+In the S3 Access Control List, allow access for all the AWS accounts in the OU and its child OUs.
+B) 
+In the S3 bucket policy, add all the IAM entities from the OU to the Principal field and allow read access.
+C) 
+Add the condition key "aws:PrincipalOrgPaths" in the S3 bucket policy to allow access based on the principal's organization path.
+D)	
+Add a Service Control Policy (SCP) to the OU that allows the get object action.
+18) As an API developer for a major manufacturing company, you have created an API resource that enables the addition of new products to the distributor's inventory through a POST HTTP request. This resource includes an Origin header and accepts application/x-www-form-encoded as the request content type. What response header should be used to grant access to this resource from a different origin?
+A) 
+All of the below
+B) 
+Access-Control-Allow-Origin
+C) 
+Access-Control-Request-Method
+D) 
+Access-Control-Request-Headers
+19) What can be specified to provide the Linux user from the third-party software firm with the minimum access permissions required to execute dependencies before the build phase of the new application deployment for your firm?
+A) 
+Specify run-as at the top of pre_build command of phases block.
+B) 
+Specify run-as for each command in the env block.
+C) 
+Specify run-as at the top of build command of phases block.
+D) 
+Specify run-as at the top of the buildspec file.
+20) Your company has developed a web application hosted on an Amazon S3 bucket configured for static content. Users can log in using their Google or Facebook accounts. The application uses the AWS SDK for JavaScript in the browser to access data in an Amazon DynamoDB table. How can you ensure that the API keys for accessing your data in DynamoDB are secure?
+A) 
+Store AWS keys in global variables within your application and configure the application to use these credentials when making requests.
+B) 
+Create an Amazon S3 role in IAM with access to the specific DynamoDB tables, and assign it to the bucket hosting the website.
+C) 
+Configure S3 bucket tags with your AWS access keys to the bucket hosting the website, so that the application can query them for access.
+D) 
+Configure a web identity federation role within IAM to enable access to the correct DynamoDB resources and retrieve temporary credentials.
+21) You have been tasked with creating an application on the AWS Cloud that will store sensitive documents in an S3 bucket. It is crucial to configure the bucket in a manner that prohibits the acceptance of unencrypted objects. How will you achieve this?
+A) 
+Enable CORS for the underlying bucket.
+B)	
+Ensure a condition is set in the bucket policy.
+C)	
+Ensure that a condition is set in an IAM policy.
+D)	
+Enable MFA for the underlying bucket.
+22) A construction company has saved all project documents in an Amazon S3 bucket. External vendors only access this data when necessary. The Security Team is conducting an audit to identify the cryptographic protocols utilized by vendors to access the data. What methods can be employed to gather this information?
+A) 
+Enable Server access logging and check Signature Version for all requests.
+B) 
+Enable Server access logging and check the TLS version for all requests.
+C) 
+Enable Server access logging and check Cipher Suite for all requests.
+D) 
+Enable Server access logging and check Host Header for all requests.
+23) A developer is designing a mobile game application that relies on AWS serverless services. To access these services, requests must be signed with an AWS access key. Among the recommended approaches, which is the most appropriate for this scenario?
+A) 
+Use federation and AWS IAM to enable single sign-on (SSO) to your AWS root accounts.
+B) 
+Embed or distribute long-term AWS credentials that a user downloads to an encrypted store.
+C) 
+Use Amazon Cognito which acts as an identity broker to implement web identity federation.
+D) 
+Write code that interacts with a web identity provider and trades the authentication token for AWS temporary security credentials.
+24) You intend to utilize the AWS CodeDeploy tool for deploying your application. What is used to define the deployment process to the underlying instances?
+A) 
+appspec.yml
+B) 
+appConfig.json
+C) 
+DeploymentGroup
+D) 
+appConfig.YAML
+25) An IT company is utilizing multiple provisioned IOPS and throughput optimized EBS volumes to store important data categorized based on different criteria. The Operations Team is seeking a data backup solution for all these EBS volumes to ensure quick data restoration in other regions. What is the most suitable option for backing up multiple EBS volumes?
+A) 
+Create a Snapshot for all EBS Volumes attached to EC2 instance individually by selecting Resource Type as Instance in Snapshot navigation pane.
+B) 
+Create a Multi-volume Snapshot for all EBS Volumes attached to EC2 instance by selecting Resource Type as Instance in Snapshot navigation pane.
+C)	
+Create a Multi-volume Snapshot for all EBS Volumes attached to EC2 instance by selecting Resource Type as Volumes in Snapshot navigation pane.
+D)	
+Create a Snapshot for all EBS Volumes attached to EC2 instance individually by selecting Resource Type as Volumes in Snapshot navigation pane.
+26) The financial institute is securely keeping its crucial data in an Amazon S3 bucket located in the us-west-1 region. In order to adhere to security compliance standards, it is necessary to duplicate this data in multiple regions. Your responsibility is to develop a replication configuration for the source bucket. What factors should be taken into account while formulating rules for replication configuration?
+A) 
+Can add multiple rules having filters matching objects based upon only object tags
+B) 
+Can add a single rule having filters matching objects based upon only object tags
+C) 
+Can add multiple rules having filters matching objects based upon object tags or object key prefixes
+D) 
+Can add a single rule having filters matching objects based upon object tags or object key prefixes
+27) As you are overseeing deployments for a Lambda application through Code Deploy, and now have an updated version of the Lambda function ready, you are required to instantly shift all traffic to the new function. In this scenario, what deployment technique would you utilize in CodeDeploy?
+A) 
+All-at-Once
+B) 
+Canary
+C) 
+Gradual
+D) 
+Linear
+28) When setting up a new Amazon Beanstalk environment with a multi-container Docker platform, what file can you utilize to define the Amazon EC2 container instance and file volumes for the platform?
+A) 
+Use Dockerrun.aws.json version 1 file.
+B) 
+Use Docker-compose.yml version 2 file.
+C) 
+Use Dockerrun.aws.json version 2 file.
+D) 
+Use Docker-compose.yml version 1 file.
+29) What is accurate regarding strongly consistent read requests from an application to a DynamoDB with a DAX cluster?
+A) 
+All requests are forwarded to DynamoDB and results are not cached.
+B)	
+All requests are forwarded to DynamoDB and results are cached.
+C)	
+All requests are forwarded to DynamoDB and results are stored in Item Cache before passing to application.
+D)	
+All requests are forwarded to DynamoDB and results are stored in Query Cache before passing to application.
+30) The developer, who is involved in an AWS CodeBuild project, aims to modify a build command during a build run for testing purposes. Despite having the ability to run the builds, the developer lacks access to the code and the ability to edit the CodeBuild project. How should the developer proceed to override the build command?
+A) 
+Update the buildspec property in the StartBuild API to override the build command during build run.
+B) 
+Update the buildspec.yml configuration file that is part of the source code and run a new build.
+C) 
+Update the command in the Build Commands section during the build run in the AWS console.
+D) 
+Run the start build AWS CLI command with buildspec Override property set to the new buildspec.yml file.
+31) The New Epic Games Development team is currently in the process of creating an updated edition of their popular car game. Since all their operations are hosted on AWS, the management has opted to investigate AWS CodeStar in conjunction with GitHub and AWS CodeDeploy for the release of the new version. Despite efforts to point dependencies to the most recent version through the package.json file within the AWS CodeStar project, the application is encountering persistent breaks during testing. What solutions are necessary to address this issue?
+A) 
+Package.json file needs to be updated with relevant read and write permissions through AWS IAM.
+B) 
+Change the repository to AWS CodeCommit since AWS CodeStar does not support GitHub.
+C) 
+Set the dependencies to point to a specific version to avoid application breaks.
+D) 
+Change the deployment tool to Jenkins since it is well supported by AWS CodeStar.
+32) The IT company plans to transfer a large number of files to the Amazon S3 bucket through Amazon S3 Batch Operations. A Junior Engineer is currently tasked with generating job requests for Amazon S3 Batch Operations. He is in search of the necessary parameters for creating a Job request. Which of the options listed below are unnecessary parameters when initiating a Job request for Batch operations?
+A) 
+Manifest
+B) 
+Priority
+C) 
+Report
+D)	
+Tags
+33) The media company utilizes EBS backed EC2 Instance for their application deployment. They perform daily snapshots of these EBS volumes. However, during an outage, they experienced a delay in the restoration of these snapshots, resulting in financial loss for the company. The IT Head has instructed to implement Fast Snapshot Restore (FSR) to improve performance and has tasked you with setting up FSR on Snapshots. What is the accurate statement regarding FSR for EBS?
+A) 
+FSR can be enabled for only New Snapshots in all Availability Zone in a region.
+B) 
+FSR can be enabled for New and Existing Snapshots per Availability Zone.
+C) 
+FSR can be enabled for only New Snapshots per Availability Zone.
+D) 
+FSR can be enabled for only Existing Snapshots per Availability Zone.
+34) Your stock market trading application sends real-time data to AWS Kinesis, which is then processed and sorted by a Lambda function before being saved to a DynamoDB table. Customers access this table through a dashboard. Upon market opening, customers report missing data. Which Lambda CloudWatch metric should you prioritize to address this issue?
+A) 
+IteratorAge
+B) 
+Throttles
+C) 
+Dwell time
+D) 
+ConcurrentExecutions
+35) What are the potential issues with the requests that are causing some of the request results to return an HTTP 4xx status code while developing an application that works with a DynamoDB table? Choose two answers from the options listed below.
+A) 
+There are network issues.
+B) 
+There are missing required parameters with some of the requests.
+C) 
+You are exceeding the table's provisioned throughput.
+D) 
+The DynamoDB service is unavailable.
+36) Your supervisor has tasked you with developing an API to retrieve information from a DynamoDB table containing over 10,000 rows of open data across 30 columns. Since not all columns are necessary for your specific use case, you have been instructed to filter out only 6 columns and save them in your internal data warehouse tool. What approach would you take to accomplish this task?
+A) 
+Use ColumnProjection operation while performing Query operation.
+B) 
+Use DataFilter operation while performing Scan operation.
+C) 
+Use ProjectionExpression operation while performing Query operation.
+D)	
+Use ProjectionExpression operation while performing Scan operation.
+37) An application must utilize a messaging system where messages are processed in the order of receipt and duplicates are not permitted. Which option would be most suitable for achieving this requirement?
+A) 
+Use the FIFO SQS Queues.
+B) 
+Enable FIFO on an existing SQS Standard Queue.
+C) 
+Add the .fifo extension to the existing Standard SQS Queue.
+D) 
+Consider using SNS.
+38) In the process of improving a project, your task is to configure an AWS Application Load Balancer with a provisioned Amazon EKS cluster for ingress-based load balancing to AWS Fargate pods. Can you outline the steps required to accomplish this? Choose two answers from the options listed below.
+A) 
+Deploy your application and create Service and Ingress resources.
+B) 
+Create a cluster. Create an AWS Fargate profile. When your pods start, Fargate automatically allocates the IAM policy so the ALB Ingress Controller can manage the AWS resources and also manages to compute resources on-demand to run them.
+C) 
+Create an AWS Fargate profile. When your pods start, Fargate automatically allocates the IAM policy so the ALB Ingress Controller can manage the AWS resources and also manages to compute resources on-demand to run them. These two steps automatically create and provision the cluster.
+D) 
+Create a cluster. Create an AWS Fargate profile. Create a cluster role and a Kubernetes service account. These steps create the IAM policy so the ALB Ingress Controller can manage the AWS resources.
+E) 
+Create a cluster. Create an AWS Fargate profile. Set up an OIDC provider with the cluster. Create the IAM policy so the ALB Ingress Controller can manage the AWS resources. Create a cluster role, role binding, and a Kubernetes service account attached to the ALB Ingress Controller running pod.
+39) As you work on a .Net Core application set to be deployed in an Elastic Beanstalk environment, with backend calls to a database, you aim to enhance its performance for testing. What is the simplest method to identify and address any performance problems efficiently?
+A) 
+Use Cloudwatch logs to debug issues.
+B) 
+Place a Load balancer in front of Elastic beanstalk.
+C) 
+Place instrumentation calls in your code.
+D) 
+Make use of traces using the X-Ray service.
+40) When setting up Cross-Origin Resource Sharing for your S3 bucket, it is important to restrict external domain sites to only being able to send GET requests to your bucket. What changes would you make in the CORS configuration to meet this requirement?
+A)	
+MaxAgeSeconds Element
+B)	
+AllowedOrigin Element
+C)	
+AllowedHeader Element
+D)	
+AllowedMethod Element
+
