@@ -1,0 +1,364 @@
+1) A newly recruited AWS System engineer is reconfiguring an AWS Auto Scaling group for a new social networking application, noticing a surge in users, traffic, and overall usage. During the scale-out event, the engineer wants to pause the newly launched instances before they are added to the Auto Scaling group, allowing them to install necessary updates and upgrade to PHP 8.2.3, ensuring they are fully prepared before receiving traffic. As an external AWS Consultant, which option would you choose to configure the setup to handle the increased traffic and usage efficiently?
+A) 
+Keep AWS EC2 instances ready by launching them manually ensuring the updates and PHP upgrade are completed after which they can be added to the AWS Auto Scaling Group.
+B) 
+Will need to configure lifecycle hooks that will transition the instance to a wait state and will ensure that the user data script containing the set of instructions to install updates and PHP upgrades will get executed, after which they can be added to the Auto Scaling Groups and will be ready to receive traffic.
+C) 
+Reuse the user data script which was used during the initial launch of AWS EC2 instances. Since the script can run multiple times even after the instances are launched, there is no need to pause the instance and set up the required applications.
+D) 
+Launch the instances using Cloud Formation and include the updates and PHP upgrades in the template file and then configure the instances in the Auto Scaling group.
+2) Your team is developing a set of Lambda functions. What best practices should the team follow to ensure optimal performance and efficiency when working with AWS Lambda?
+A) 
+Use recursive code to make the code clean.
+B) 
+The Lambda function should not have any external dependencies.
+C) 
+Avoid using environment variables.
+D) 
+Separate the Lambda handler from your core logic.
+3) As a developer, you need to access resources in a different account. What is the most effective method to accomplish this task?
+A) 
+Create an IAM Role and attach it to an EC2 Instance.
+B) 
+Create a cross-account role and call the AssumeRole API.
+C) 
+Create a user in the destination account and share the password.
+D) 
+Create a user in the destination account and share the Access Keys.
+4) In your Dev environment, you have launched a Python application using the AWS Beanstalk service and integrated a PostgreSQL database via the AWS RDS service. Testing has confirmed that the application can read environment properties and construct a connection string to connect to the database. As you plan to move to the production environment, you have decided to decouple the database from the AWS Elastic Beanstalk environment for greater flexibility. Based on this scenario, which option best describes the state of the configuration? Choose two answers from the options listed below.
+A)	
+You cannot integrate AWS RDS service through AWS Elastic Beanstalk. PostgreSQL database service / engine will have to be set up and configured separately.
+B)	
+The decoupled database can remain operational as an external Amazon RDS database instance.
+C)	
+The health of the environment isn't affected by decoupling the database, and we have the option to keep the database available and operational outside of Elastic Beanstalk if there is a need to terminate the environment.
+D)	
+The database is dependent upon your environment's lifecycle, and therefore gets deleted when you terminate the environment.
+5) You are developing an application that will use Amazon Kinesis and, due to high throughput, you decide to use multiple shards for the streams. Which of the following statements is TRUE regarding processing data across multiple shards?
+A) 
+You need to use Kinesis firehose to guarantee the order of data.
+B) 
+You cannot guarantee the order of data across multiple shards. It's possible only within a shard.
+C) 
+Order of data is possible across all shards in a stream.
+D) 
+Order of data is not possible at all in Kinesis streams.
+6) You have been assigned to manage the database administration for a web application where the database was initially created by a former DB admin. The manager has requested your assistance in implementing a new reporting feature that requires querying a DynamoDB table using attributes that are not designated as Partition Key and Sort Key. How would you recommend resolving this issue?
+A) 
+Edit the table and change the existing Partition and Sort Key to the required ones.
+B) 
+Clone the existing table and change the Partition and Sort Key during the table creation process.
+C) 
+Create a Local Secondary Index with required attributes as Partition and Sort Key.
+D) 
+Create Global Secondary Index and set required attributes as Partition and Sort Key.
+7) 	As a developer with specialized API knowledge, you have been brought on board to manage the front-end interactions of the company's APIs, which are currently being facilitated through API Gateway services. What steps can be taken to effectively control the behavior of these interactions? Choose two answers from the options listed below.
+A) 
+Modify the configuration of the Integration response
+B) 
+Modify the configuration of the Method request
+C) 
+Modify the configuration of the Integration request
+D) 
+Modify the configuration of the Method response
+8) A microservice application is developed using AWS Lambda functions that are invoked by a non-instrumented service. To optimize performance and integrate AWS X-Ray for tracing across multiple services, what should a developer do when the non-instrumented service invokes an AWS Lambda function?
+A)	
+AWS Lambda functions invoked by non-instrumented services do not support tracing.
+B)	
+For non-instrumented services, AWS Lambda records trace without any additional configuration.
+C)	
+Enable Start tracing under AWS Lambda Function configuration.
+D)	
+Enable Active tracing under AWS Lambda Function configuration.
+9) The engineers at EpicONE Games are determining the cache memory and node provisioning size for their AWS ElastiCache cluster to support high throughput, low latency, and approximately 35 to 45 million users per session for their upcoming war game. They have been advised to distribute the memory over more nodes with smaller capacities rather than using fewer nodes with larger capacities. With a requirement of 35 GB of cache memory for the cluster, one of the engineers has proposed several options. How would you assist the team in choosing the correct sizing from the proposed options?
+A) 
+The number of nodes in the cluster is not a key factor when it comes to cluster availability.
+B) 
+Use cache.t2.medium type of nodes with each having 3.22 GiB memory, 2 cores, and a quantity of 11 nodes giving 35.42 GiB in total meeting the requirement.
+C) 
+Start with one cache.m5.large node. Monitor memory usage, CPU utilization, and cache hit rate with ElastiCache metrics that further get published to CloudWatch. These metrics will enable monitoring of your clusters in the form CPU usage and cache gets and cache misses. These metrics will get measured and published for each Cache node in 60-second intervals. Based on the results, node and memory sizing can then be worked upon.
+D) 
+The node size does not impact the performance and fault tolerance at all. You could start with the t2 type of instances keeping the cost to a minimum and then add the nodes as the requirement increases.
+10) The development team is currently working on an event-driven application that requires processing of data stored in the Amazon S3 bucket and sending notifications to multiple subscribers through Amazon SNS. As a result, a single topic is established in Amazon SNS, and messages are distributed to various Amazon SQS queues that are subscribed to this topic. What is the accurate statement regarding the messages sent to the Amazon SQS queue?
+A) 
+Messages sent to the topic will be visible to the queue, once processing of the message is completed by the first queue.
+B) 
+Each Queue will receive an identical message sent to that topic instantaneously.
+C) 
+Message sent to the topic will be evenly distributed among all the queues which have subscribed to this topic.
+D) 
+Each Queue will receive a message sent to that topic asynchronously with a time delay.
+11) Consider deploying a mobile application for an eCommerce company that necessitates theme changes based on the device type. Android devices should display a green theme, while iOS devices should display a blue theme. It is recommended to utilize AWS Lambda for the mobile backend deployment. What is the most efficient way to achieve this?
+A) 
+Use the "event" object to determine which device invoked the function.
+B) 
+Use a REST client to pass device info to API Gateway that invokes AWS Lambda function.
+C) 
+Different environment variables for Android and iOS.
+D) 
+Use AWS Mobile SDK and use the "context" object.
+12) Company B is inserting 10 records into the Dynamo DB table per second, with each record being 15.5Kb in size. What provisioned write throughput would be necessary to achieve optimal performance?
+A) 
+16
+B) 
+10
+C) 
+160
+D) 
+155
+13) You are planning to use AWS Kinesis streams for an application being developed for a company. The company policy mandates that all data must be encrypted at rest. How can you easily ensure that Kinesis streams meet this requirement?
+A) 
+Use the AWS CLI to encrypt the data.
+B) 
+Use the SDK for Kinesis to encrypt the data before being stored at rest.
+C) 
+Enable server-side encryption for Kinesis streams.
+D) 
+Enable client-side encryption for Kinesis streams.
+14) A construction company has saved all project documents in an Amazon S3 bucket. External vendors only access this data when necessary. The Security Team is conducting an audit to identify the cryptographic protocols utilized by vendors to access the data. What methods can be employed to gather this information?
+A) 
+Enable Server access logging and check Signature Version for all requests.
+B) 
+Enable Server access logging and check the TLS version for all requests.
+C) 
+Enable Server access logging and check Cipher Suite for all requests.
+D) 
+Enable Server access logging and check Host Header for all requests.
+15) When developing an application to be hosted in AWS Lambda that will make calls to a database, it is crucial to ensure that all database connection strings are kept secure. What is the most secure way to implement this requirement?
+A)	
+Place the database connection string in the AWS Lambda function itself since all Lambda functions are encrypted at rest.
+B)	
+Put the connection strings values in a CloudFormation template.
+C)	
+Put the database connection string in the app.json file and store it in a Git repository.
+D)	
+Lambda needs to reference the AWS Systems Manager Parameter Store for the encrypted database connection string.
+16) When creating an application, it is advisable to incorporate MFA and password recovery as extra measures to enhance security through the implementation of dual authentication and recovery processes. What is the best approach to take in this situation?
+A) 
+Use SMS as a second factor and TOTP along with a security key as the MFA device for your IAM and root users.
+B) 
+Use TOTP as a second factor and SMS as a password recovery mechanism which is disjoint from an authentication factor.
+C) 
+Enable MFA as Required immediately after creating a user pool to add another layer of security.
+D) 
+Disable adaptive authentication, so you can configure a second factor authentication in response to an increased risk level.
+17) A developer is designing a mobile game application that relies on AWS serverless services. To access these services, requests must be signed with an AWS access key. Among the recommended approaches, which is the most appropriate for this scenario?
+A) 
+Use federation and AWS IAM to enable single sign-on (SSO) to your AWS root accounts.
+B) 
+Embed or distribute long-term AWS credentials that a user downloads to an encrypted store.
+C) 
+Use Amazon Cognito which acts as an identity broker to implement web identity federation.
+D) 
+Write code that interacts with a web identity provider and trades the authentication token for AWS temporary security credentials.
+18) As an API developer for a major manufacturing company, you have created an API resource that enables the addition of new products to the distributor's inventory through a POST HTTP request. This resource includes an Origin header and accepts application/x-www-form-encoded as the request content type. What response header should be used to grant access to this resource from a different origin?
+A) 
+All of the below
+B) 
+Access-Control-Allow-Origin
+C) 
+Access-Control-Request-Method
+D) 
+Access-Control-Request-Headers
+19) In the role of a cloud engineer, you have been authorized to access an Amazon ECR image repository. Your task involves retrieving images from the repository as a component of a container definition while setting up an Amazon ECS task. What accurately characterizes this situation?
+A) 
+You must grant your Amazon ECS task execution role permission to access Amazon ECS
+B) 
+You can access the Amazon ECR image repository only with the Amazon EC2 launch type.
+C) 
+You can access the Amazon ECR image repository only with the AWS Fargate launch type.
+D) 
+You can access the Amazon ECR image repository with Amazon EC2 or AWS Fargate launch types.
+20) What can be specified to provide the Linux user from the third-party software firm with the minimum access permissions required to execute dependencies before the build phase of the new application deployment for your firm?
+A) 
+Specify run-as at the top of pre_build command of phases block.
+B) 
+Specify run-as for each command in the env block.
+C) 
+Specify run-as at the top of build command of phases block.
+D) 
+Specify run-as at the top of the buildspec file.
+21) Your organization is preparing to store files in an S3 bucket. These files contain confidential information, and staff members must utilize Multi-Factor authentication when attempting to retrieve them. What steps need to be taken to meet this criteria?
+A) 
+Ensure that the bucket policy is in place with a condition of "aws:MultiFactorAuthPresent": "true" with a Deny policy.
+B) 
+Ensure that the Encryption is enabled for the bucket - AWS server-side encryption.
+C) 
+Ensure that the Encryption is enabled for the bucket using KMS keys.
+D) 
+Ensure that the bucket policy is in place with a condition of "aws:MultiFactorAuthPresent":"false" with a Deny policy.
+22) Your team is in the process of developing an application, and it is necessary to implement an Amazon Elastic File System (EFS) to facilitate data sharing among various nodes. In order to ensure security within the EFS file system, it is essential to establish a policy that enforces specific default security rules. For instance, disabling root access and mandating the use of TLS for connections from EFS clients are among the requirements. What would be the most appropriate approach to achieve this?
+A) 
+Add the TLS option when mounting the file system with the EFS mount helper.
+B) 
+Attach an IAM identity policy to each IAM entity to perform specific actions on the file system.
+C) 
+Configure an EFS file system policy to control NFS client access to the EFS resource.
+D)	
+Create an EFS service-linked role and attach it to the file system.
+23) You are developing an application using AWS Lambda, where a Lambda function is placed in a private subnet without internet access. This Lambda function will receive bank account information as a JSON object (about 7 KB in size). To satisfy the requirement of encrypting this information before saving it to DynamoDB, which approach should you use?
+A) 
+Generate a new Customer Master Key. Encrypt the JSON data with the encrypt() KMS method using the CMS previously generated. Upload the encrypted data to DynamoDB.
+B) 
+Create a VPC Endpoint in the Lambda VPC for the KMS Service. Generate a new Customer Master Key. Encrypt the JSON data using KMS Envelope Encryption. Upload the encrypted data to DynamoDB.
+C) 
+Generate a new Customer Master Key. Encrypt the JSON data using KMS Envelope Encryption. Upload the encrypted data to DynamoDB.
+D) 
+Create a VPC Endpoint in the Lambda VPC for the KMS Service. Generate a new Customer Master Key. Encrypt the JSON data with the encrypt() KMS method using the CMS previously generated. Upload the encrypted data to DynamoDB.
+24) An IT company is utilizing multiple provisioned IOPS and throughput optimized EBS volumes to store important data categorized based on different criteria. The Operations Team is seeking a data backup solution for all these EBS volumes to ensure quick data restoration in other regions. What is the most suitable option for backing up multiple EBS volumes?
+A) 
+Create a Snapshot for all EBS Volumes attached to EC2 instance individually by selecting Resource Type as Instance in Snapshot navigation pane.
+B) 
+Create a Multi-volume Snapshot for all EBS Volumes attached to EC2 instance by selecting Resource Type as Instance in Snapshot navigation pane.
+C) 
+Create a Multi-volume Snapshot for all EBS Volumes attached to EC2 instance by selecting Resource Type as Volumes in Snapshot navigation pane.
+D) 
+Create a Snapshot for all EBS Volumes attached to EC2 instance individually by selecting Resource Type as Volumes in Snapshot navigation pane.
+25) The Development Team has effectively implemented a new application on the Amazon EC2 instance in the us-west-2 region. They now require your assistance in deploying the same application on Amazon EC2 instances in other regions. Specifically, they need support in deploying EC2 instances with images created from instances in the us-west-2 region, while ensuring that the latest security patches are applied. What would be the most appropriate action to meet this requirement?
+A) 
+Use EC2 Image Builder to create images with the latest patches.
+B) 
+Create a snapshot of an image and deploy it in all other EC2 instances.
+C) 
+Build automated scripts to create updated images with the latest patches.
+D)	
+Manually create EC2 image with the latest patches.
+26) The deployment team is currently engaged in developing a new serverless application utilizing AWS Lambda, CodeBuild, and AWS CloudFormation. Users involved in the project will need to access the source code from different on-premise locations. What locations are supported for storing the source code used for the build process? Choose three answers from the options listed below.
+A) 
+Bitbucket
+B) 
+EC2 Instance
+C) 
+Amazon S3 Bucket
+D) 
+On-Premise Local machine
+E) 
+AWS CodeCommit
+27) You have been appointed as the lead developer responsible for overseeing the development of a new application. The application requires communication with a backend data-store. The program also requires the execution of numerous complex join operations. Which of the following data-store options would be considered optimal? Choose two answers from the options listed below.
+A) 
+AWS S3
+B) 
+AWS DynamoDB
+C) 
+AWS RDS
+D) 
+AWS Redshift
+28) As a developer at a travel company specializing in booking accommodations for customers, you are tasked with deploying a new feature that enables real-time booking through the API. How do you plan to test this new API feature with minimal disruption to customers?
+A) 
+Create a stage and promote a canary release.
+B) 
+Create a stage and inform your pilot customers to change their endpoint.
+C) 
+Create a stage and inform your pilot customers to change their endpoint and attach a usage plan.
+D) 
+Create a stage and enable canary release.
+29) Your manager has requested that you set up event notifications for changes made to objects in Amazon S3 following a recent incident where critical files were deleted from the S3 bucket. When publishing events from Amazon S3, which of the following destinations is not supported?
+A) 
+Amazon CloudWatch Events
+B) 
+Amazon SNS
+C) 
+AWS Lambda
+D)	
+Amazon SQS
+30) When utilizing an Amazon DynamoDB table with a Global Secondary Index, what method can be employed to efficiently retrieve the most recent results while minimizing the impact on Read Capacity Units (RCU)?
+A) 
+Scan with EventualRead
+B) 
+Query with ConsistentRead
+C) 
+Scan with ConsistentRead
+D) 
+Query with EventualRead
+31) You create a Lambda function that requires connection to an RDS MySQL database. You utilize a CD pipeline for deploying the Lambda function within the identical VPC subnet as the RDS database to enable communication. Upon encountering the issue of the deployed Lambda function being unable to access the internet, what steps would you take to address this issue?
+A) 
+Open the outgoing port in the Lambda function access control list.
+B) 
+Modify the pipeline to deploy the Lambda function in the default VPC rather than the same VPC as RDS.
+C) 
+Configure a NAT gateway in the VPC and route the outbound traffic to the NAT gateway.
+D) 
+Deploy the Lambda function outside of the custom VPC.
+32) 	The development team is currently strategizing the migration of an on-premise data store to AWS DynamoDB. The previous database had defined triggers for updating existing items. What is the simplest method to replicate this functionality in DynamoDB after the migration?
+A) 
+Define SQS topics in response to events from DynamoDB Streams.
+B) 
+Define triggers in DynamoDB for each table.
+C) 
+Define Lambda functions in response to events from DynamoDB Streams.
+D) 
+Define SNS topics in response to events from DynamoDB Streams.
+33) You have implemented an application with AWS Lambda and the API gateway service. You now need to deploy a newer version of the application. The management has directed that the newer version must undergo testing before full deployment, while the base version remains in operation. What is the simplest way to achieve this?
+A) 
+Create another resource and method. Deploy the API. Give the users the new URL.
+B) 
+Create a new Lambda function and a new API gateway. Give the users the new URL.
+C) 
+Create a new version of the existing Lambda function and a new API gateway. Give the users the new URL.
+D)	
+Create a canary release in the API gateway service.
+34) Your application is presently set up to communicate with an S3 bucket. You are now encountering errors indicating that the bucket is no longer available. What is the most effective method to determine how the bucket was removed?
+A) 
+Use the AWS Trusted Advisor service to see the Bucket Deletion API request.
+B) 
+Use the Cloudwatch logs to see the Bucket Deletion API request.
+C) 
+Use the Cloudtrail logs to see the Bucket Deletion API request.
+D) 
+Use the AWS Inspector service to see the Bucket Deletion API request.
+35) You are tasked with conducting fault injection on a crucial production application to guarantee its resilience in the face of disruptive incidents. The testing will utilize AWS Fault Injection Simulator templates for Amazon EC2 instances located in us-east-1a. It is essential that no other instances in different availability zones are affected during the testing. What parameters are available in AWS Fault Injection Simulator experiment templates to target specific Amazon EC2 instances in the us-east-1a availability zone?
+A) 
+Specify path and values in a resource filters section of an Action Set component in the experiment template.
+B) 
+Specify path and values in a resource filters section of a Target component in the experiment template.
+C) 
+Specify path and values in a resource tags section of a Target component in the experiment template.
+D) 
+Specify path and values in a resource tags section of an Action Set component in the experiment template.
+36) You have surpassed the highest provisioned throughput limit for a table in DynamoDB. What are the appropriate methods to resolve this issue? Choose three answers from the options listed below.
+A) 
+Implement error retries and exponential backoff in your application code.
+B) 
+In your DynamoDB table distribute all the operations read and written across more distinct partition key values.
+C) 
+Enable DynamoDB Streams.
+D) 
+Enable DynamoDB Time to Live.
+E) 
+Implement DAX (DynamoDB Accelerator) as a cache solution to improve the performance of the tables.
+37) When setting up Cross-Origin Resource Sharing for your S3 bucket, it is important to restrict external domain sites to only being able to send GET requests to your bucket. What changes would you make in the CORS configuration to meet this requirement?
+A)	
+MaxAgeSeconds Element
+B)	
+AllowedOrigin Element
+C)	
+AllowedHeader Element
+D)	
+AllowedMethod Element
+38) An application you developed is inputting custom metrics into Cloudwatch. You must create alarms to trigger at 10-second intervals based on the published metrics. What actions are necessary to fulfill this requirement?
+A) 
+Create high-resolution metrics.
+B) 
+Enable basic monitoring.
+C) 
+Enable detailed monitoring.
+D) 
+Create standard resolution metrics.
+39) You have recently set up a Lambda function that is located behind the API gateway service. Upon attempting to call the Lambda function through the API gateway service from JavaScript in your HTML page, you encounter the following issue: "No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access." What steps can be taken to fix this problem?
+A) 
+Change the IAM policy for the API gateway to enable anonymous access.
+B) 
+Enable CORS for the lambda function.
+C) 
+Enable CORS for the methods in the API gateway.
+D) 
+Change the IAM policy for the Lambda function to enable anonymous access.
+40) Your team recently completed the development of an updated version of an existing application. The application is web-based and is hosted on AWS. At present, Route 53 is utilized to direct the company's DNS name to the website. Your Management has tasked you with delivering the new application to a subset of users for testing. How do you plan to accomplish this?
+A)	
+Use Route 53 failover Routing policies.
+B)	
+Port the application onto Elastic beanstalk and use the Swap URL feature.
+C)	
+Use Route 53 weighted Routing policies.
+D)	
+Port the application onto Opswork by creating a new stack.
