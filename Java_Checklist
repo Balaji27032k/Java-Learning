@@ -1,0 +1,153 @@
+Core Java
+OOPs
+Abstraction, Encapsulation, Inheritance, Polymorphism
+SOLID principles
+Composition vs Inheritance
+static vs dynamic binding
+
+Java Basics(deep dive)
+Access modifiers
+final, finally, finalize
+equals() vs ==
+hashCode() contract
+Wrapper classes & auto-boxing/unboxing
+JVM architeture (classloader,Heap,Stack etc)
+
+Exception Handling
+Checked vs unchecked exceptions
+custom exceptions
+Best practices in exception handling
+
+Java Collections Framework
+Know internal working+complexities
+List: Arraylist, Linkedlist
+Set: HashSet, LinkedHashSet, TreeSet
+Fail-fast vs fail safe
+How Hashmap works internally (important)
+Collision handling, rehashing, load factor
+Concurrent collections
+
+Java8 + Concepts
+Functional Programming
+Lambda expressions
+Method References
+
+Streams
+Intermediate vs terminal Operations
+map, filter, reduce
+stream performance considerations
+parallel streams
+
+Optional 
+Best practices
+Avoid misuse(use the return typse only)
+
+Date & Time API
+
+Multithreading & Concurrency
+Thread Basics
+Thread life cycle
+Runnable vs Callable
+Thread pool Executor
+
+Synchronization Concepts
+Synchronized blocks and methods
+Locks, ReentrantLock
+DeadLock, live lock, Race conditions
+
+Concurrent Package
+Concurrenthashmap
+Count Down Latch, Cyclic Barrier
+semaphore
+Blockingqueue, LinkedBlocking queue
+Completable Future
+
+JVM Internals
+class loading process
+JIR Compiler
+Garbage collectors(G1, Serial, Parallel)
+Memory Structure: Heap, Stack, MetaSpace
+OutOfMemory Error, StackOverflowError
+How to analyze heap dump/thread dump (basic knowlege)
+
+Design Patterns
+Creational 
+Singleton
+Factory, Abstract Factory
+Builder
+
+Structoral
+Adapter
+Decorator
+Proxy
+
+Behavioral 
+strategy
+observer
+Spring and Spring Boot
+Spring core
+IoC/DI
+bean scopes
+Application Context
+Lifecycle methods
+
+Spring Boot
+Auto-configuration
+Actuator
+Profiles
+Configuration properties
+
+Spring MVC
+RestController
+Filter vs Interceptors
+Exception handling(@ControllerAdvice)
+
+Spring Data JPA
+JPQL vs Native queries
+Entity lifecycle
+Lazy vs Eager loading
+N+1 problem
+
+Spring Security
+Authentication vs Authorization
+Filters chain
+
+Databases
+SQL 
+Joins
+Indexing(Clustered vs non-clustered)
+Transactions(ACID)
+Isolation levels
+Stored procedures, views
+
+REST APIs & Microservices Concepts
+REST principles(Idempotency, Statelessness)
+HTTP methods & status codes
+Exception handling in API
+Logging
+Versioning strategies
+Serialization/Deserialization problems
+
+Microservices Basics
+Service registry
+Load balancing
+Config management
+Circuit breaker(Resilience4j)
+
+Build & Tools
+Maven/Gradle
+Git
+Docker basics
+CI/CD knowledge(Jenkins/Github Actions)
+
+DSA
+Arrays, Strings
+Hashing
+Stack, queue
+LinkedList
+Tree & Binary Search Tree
+Graph basics
+Sliding Window
+Dynamic Programming( medium level)
+Sorting algorithms
+
