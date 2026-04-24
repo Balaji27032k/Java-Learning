@@ -1,0 +1,914 @@
+Section 1: Getting Started with Java Programming
+
+Course Introduction: Your Journey to Becoming a Java Developer (1 min)
+Course Remastered: All Lessons Updated to Java 17 with New Slides (1 min)
+Maximizing Video Quality for Optimal Course Viewing Experience (1 min)
+Enabling and Using Subtitles for Improved Course Comprehension (1 min)
+Getting Help: Using the Q&A Section for Java Programming Support (1 min)
+Source Code Access and the Importance of Hands‑On Coding Practice (1 min)
+The Key to Success: Persistence and a Growth Mindset in Programming (1 min)
+Choosing the Right Java Version: Understanding Long‑Term Support (LTS) (3 min)
+
+
+Section 2: Java Development Environment Setup
+
+Essential Software Tools for Java Development: JDK 17 and IntelliJ IDEA (1 min)
+Installing JDK 17 on Windows 10 and Windows 11 (3 min)
+Installing JDK 17 on macOS (3 min)
+Installing OpenJDK 17 on Ubuntu Linux (2 min)
+Verify Java Installation and Explore Java Interactively with JShell (11 min)
+
+
+Section 3: First Steps in Java Programming
+
+Your First Java Program: Hello World & Error Handling (10 min)
+Variables, Keywords, and Integer Data Type (16 min)
+Using Variables in Java Expressions (9 min)
+Primitive Types, Ranges & Wrapper Classes (17 min)
+Byte, Short, Long and Width (13 min)
+Casting Numeric Primitive Types (9 min)
+Primitive Types Challenge (6 min)
+Float and Double Precision (11 min)
+Floating‑Point Precision Challenge (12 min)
+Char and Boolean Data Types (12 min)
+Primitive Types Recap & String Introduction (17 min)
+Operators, Operands, and Expressions (12 min)
+Abbreviating Operators (13 min)
+
+
+Section 4: Transitioning from JShell to IntelliJ IDEA
+
+The Power of an IDE (2 min)
+What Is an IDE? (2 min)
+Installing IntelliJ IDEA (Windows) (6 min)
+Installing IntelliJ IDEA (Mac) (5 min)
+Installing IntelliJ IDEA (Linux) (4 min)
+Configuring IntelliJ IDEA (Windows) (7 min)
+Configuring IntelliJ IDEA (Mac) (6 min)
+Configuring IntelliJ IDEA (Linux) (6 min)
+Creating First IntelliJ Project (8 min)
+Understanding Code Structure (11 min)
+if‑then Statement (8 min)
+Logical AND Operator (7 min)
+Logical OR Operator (5 min)
+Assignment vs Equality Operator (8 min)
+Ternary Operator (7 min)
+Operator Precedence & Challenge (10 min)
+
+
+Section 5: Expressions, Statements, Code Blocks & Methods
+
+Java Workflow Introduction (1 min)
+Keywords & Expressions (9 min)
+Statements, Whitespace & Code Organization (9 min)
+Code Blocks and if‑else (9 min)
+if‑else Challenge (10 min)
+Methods Overview (14 min)
+More on Methods (10 min)
+Methods Recap (8 min)
+Method Challenge (12 min)
+Code Comparison in IntelliJ (7 min)
+Coding Exercises Introduction (13 min)
+Method Overloading (13 min)
+Method Overloading Challenge (9 min)
+Seconds & Minutes Challenge (11 min)
+Bonus Challenge Solution (9 min)
+
+
+Section 6: Conditional Logic, Loops & User Input
+
+Program Flow Introduction (1 min)
+Switch Statement (11 min)
+More Switch Statements (13 min)
+Switch Challenge (6 min)
+Switch Expression Challenge (9 min)
+for Loop (12 min)
+for Loop Challenge (14 min)
+Sum 3 and 5 Challenge & Debugger (16 min)
+for Loop Recap (8 min)
+while & do‑while Loops (11 min)
+while Loop Challenge (10 min)
+Digit Sum Challenge (9 min)
+while/do‑while Recap (8 min)
+Local Variables & Scope (6 min)
+Classes, Objects, Static vs Instance (7 min)
+System.console() Input (12 min)
+Exception Handling & Scanner (11 min)
+Reading Input with Scanner (9 min)
+Reading User Input Challenge (10 min)
+Min & Max Challenge (8 min)
+
+
+Section 7: Java OOP – Classes & Inheritance
+(33 lectures, all with durations)
+
+OOP Introduction (1 min)
+Classes & Objects (13 min)
+Getters & Encapsulation (9 min)
+Setters & Object Creation (12 min)
+Classes Challenge (9 min)
+Constructors Part 1 (8 min)
+Constructors Part 2 (10 min)
+Constructor Challenge (8 min)
+References vs Objects (8 min)
+Static Variables (4 min)
+Static Methods (5 min)
+POJO (9 min)
+Records (10 min)
+Inheritance Part 1 (12 min)
+Inheritance Part 2 (11 min)
+Inheritance Part 3 (11 min)
+java.lang.Object (12 min)
+Inheritance Challenge Part 1 (11 min)
+Inheritance Challenge Part 2 (10 min)
+this vs super (6 min)
+Overloading vs Overriding (9 min)
+Text Blocks & Formatting (12 min)
+Strings Deep Dive (12 min)
+String Methods (11 min)
+StringBuilder (12 min)
+
+Section 8: Advanced OOP Techniques – Composition, Encapsulation & Polymorphism
+
+OOP Part 2 Introduction (1 min)
+Composition Part 1: Building a Computer (10 min)
+Composition Part 2: Computer Components (11 min)
+Composition Challenge: Smart Kitchen (10 min)
+Encapsulation Part 1 (10 min)
+Encapsulation Part 2 (9 min)
+Encapsulation Challenge: Printer (9 min)
+Polymorphism Part 1 (10 min)
+Polymorphism Part 2 (13 min)
+Casting with Classes and var (11 min)
+instanceof and Pattern Matching (5 min)
+Polymorphism Challenge (9 min)
+Polymorphism Challenge – Part 2 (6 min)
+OOP Master Challenge – Part 1 (11 min)
+OOP Master Challenge – Part 2 (13 min)
+OOP Master Challenge – Bonus (8 min)
+Packages & Import Statements (10 min)
+
+
+Section 9: Advanced Arrays in Java
+
+Arrays Introduction (1 min)
+Arrays Part 1: Declaring & Initializing (11 min)
+Arrays Part 2: Populating & Looping (11 min)
+java.util.Arrays: sort, fill, copyOf (9 min)
+Binary Search & Equality (6 min)
+Arrays Challenge (9 min)
+Arrays Recap (7 min)
+Reference vs Value Types (8 min)
+Varargs (7 min)
+Minimum Element Challenge (7 min)
+Reverse Array Challenge (9 min)
+Two‑Dimensional Arrays (10 min)
+Multi‑Dimensional Arrays (7 min)
+
+
+Section 10: Lists, Iterators, Autoboxing & Enums
+
+Collections Introduction (1 min)
+List & ArrayList Part 1 (10 min)
+ArrayList Part 2 (10 min)
+ArrayList Part 3 (8 min)
+Arrays vs ArrayLists (11 min)
+ArrayList Challenge (10 min)
+LinkedList Overview & Big‑O (12 min)
+LinkedList Part 1 (10 min)
+LinkedList Part 2 (8 min)
+Iterators Explained (10 min)
+LinkedList Challenge Part 1 (10 min)
+LinkedList Challenge Continued (11 min)
+Autoboxing & Unboxing Introduction (10 min)
+Autoboxing with Arrays & Lists (7 min)
+Autoboxing Challenge Part 1 (7 min)
+Autoboxing Challenge Part 2 (6 min)
+Enums Introduction (9 min)
+Enums Continued (8 min)
+
+
+Section 11: Abstraction & Interfaces
+
+Abstraction Introduction (1 min)
+Abstraction & Modifiers Overview (4 min)
+Abstract Classes Part 1 (9 min)
+Abstract Classes Part 2 (7 min)
+Abstract Classes Part 3 (9 min)
+Abstract Class Challenge Part 1 (8 min)
+Abstract Class Challenge Part 2 (7 min)
+Interfaces Part 1 (10 min)
+Interfaces Part 2 (10 min)
+Interfaces Part 3 (10 min)
+Interfaces – JDK 8 Enhancements (10 min)
+Interfaces – JDK 9 Enhancements (9 min)
+Interface vs Abstract Class (7 min)
+Interface Challenge Part 1 (11 min)
+Interface Challenge Part 2 (9 min)
+
+
+Section 12: Java Generics
+
+Generics Introduction (1 min)
+Generics Part 1 (9 min)
+Generics Part 2 (12 min)
+Generics Part 3 (11 min)
+Generic Class Challenge Part 1 (10 min)
+Generic Class Challenge Part 2 (7 min)
+Comparable Revisited (10 min)
+Comparable vs Comparator (11 min)
+Generic Classes as Reference Types (11 min)
+Generic Methods & Wildcards (13 min)
+Static Methods & Multiple Bounds (11 min)
+Final Generics Challenge (11 min)
+
+
+Section 13: Nested, Inner, Local & Anonymous Classes
+
+Nested Classes Overview (2 min)
+Static Nested Classes (8 min)
+Inner Classes (8 min)
+Inner Classes – Bill’s Burger (8 min)
+Inner Classes Challenge (12 min)
+Local Classes (12 min)
+Anonymous Classes (11 min)
+Local & Anonymous Challenge (7 min)
+
+
+Section 14: Lambda Expressions & Method References
+
+Lambda Expressions Introduction (2 min)
+Lambdas & Functional Interfaces (12 min)
+Lambda Syntax & Rules (11 min)
+Lambdas Continued (12 min)
+Consumer & Predicate Interfaces (12 min)
+Function & Supplier Interfaces (12 min)
+Lambda Mini Challenges (14 min)
+Lambda Challenge (12 min)
+Method References Introduction (9 min)
+Complex Method References (13 min)
+Method Reference Challenge (11 min)
+Chaining Lambdas (11 min)
+Comparator Convenience Methods (5 min)
+
+
+Section 15: Java Collections Framework
+
+Collections Framework Introduction (1 min)
+Collections Big Picture (11 min)
+Deck of Cards Setup (12 min)
+java.util.Collections Intro (12 min)
+Collections Continued (9 min)
+Collections Advanced (12 min)
+Card Game Challenge (12 min)
+Five Card Draw Challenge (11 min)
+HashCode Explained (16 min)
+Sets & Maps Setup (12 min)
+HashSet Introduction (14 min)
+Set Operations (12 min)
+Set Challenge Setup (14 min)
+Set Challenge Solution (14 min)
+LinkedHashSet & TreeSet (11 min)
+TreeSet Deep Dive (10 min)
+TreeSet Challenge (14 min)
+TreeSet Bonus (12 min)
+Map Interface (14 min)
+Map Continued (9 min)
+Map Views (15 min)
+HashMap Challenge (11 min)
+HashMap Continued (9 min)
+LinkedHashMap & TreeMap (12 min)
+TreeMap NavigableMap (13 min)
+EnumSet & EnumMap (9 min)
+Collections Final Challenge (13 min)
+Store Inventory Challenge Part 1 (11 min)
+Store Inventory Challenge Part 2 (10 min)
+
+
+Section 16: Mutability, Immutability, Final & Sealed Classes
+
+Mutable vs Immutable Objects (3 min)
+Revisiting Final Modifier (11 min)
+Final on Methods & Variables (12 min)
+When Change Isn’t Good (13 min)
+Declaring Immutable Classes Part 1 (13 min)
+Declaring Immutable Classes Part 2 (13 min)
+Immutable Classes Challenge (8 min)
+Defensive Copies (11 min)
+Immutable Collections (10 min)
+Unmodifiable Collections Challenge (9 min)
+Banking App Continued (11 min)
+Constructors Review (14 min)
+Record Constructors (11 min)
+Enum Constructors (9 min)
+Game Console Setup Part 1 (10 min)
+Game Console Setup Part 2 (7 min)
+Initializers Challenge (12 min)
+Pirate Game Continued (12 min)
+Final Classes Review (9 min)
+Sealed Classes (13 min)
+Final Section Challenge (14 min)
+Final Challenge Continued (16 min)
+
+
+Section 17: Java Streams API
+
+Streams Introduction (5 min)
+First Look at Streams (8 min)
+Stream Pipeline Structure (8 min)
+Stream Sources (15 min)
+Stream Sources Challenge (12 min)
+Intermediate Operations – filter, map, etc. (9 min)
+map, peek, sorted (12 min)
+Terminal Operations (11 min)
+Student Engagement Setup Part 1 (9 min)
+Student Setup Part 2 (11 min)
+Terminal Ops Challenge (10 min)
+Terminal Ops Solution (6 min)
+collect & reduce (10 min)
+collect & reduce Continued (10 min)
+Terminal Ops Challenge Part 2 (14 min)
+Optional Introduction (15 min)
+More Terminal Operations (9 min)
+Streams to Maps Challenge (11 min)
+flatMap Explained (10 min)
+Final Streams Challenge (12 min)
+
+Section 18: Java Core Fundamentals – Math, BigDecimal & Date/Time
+
+Introduction to Core Java APIs (1 min)
+java.lang.Math Deep Dive (8 min)
+Random Numbers: Math.random & Random (13 min)
+Randomization Challenge: Rolling Dice (9 min)
+Dice Game Bonus Challenge (14 min)
+BigDecimal Introduction (11 min)
+BigDecimal Methods & Rounding (14 min)
+java.time Overview (7 min)
+LocalDate Explained (12 min)
+LocalTime & LocalDateTime (13 min)
+Instant, Period, Duration & Time Zones (9 min)
+ZoneId & Daylight Savings Time (11 min)
+Instant, ZonedDateTime & ChronoUnit (13 min)
+Locale Introduction (9 min)
+Localization Continued (11 min)
+DateTime & Localization Challenge (14 min)
+Internationalization with ResourceBundle (10 min)
+ResourceBundle Continued (10 min)
+
+
+Section 19: Regular Expressions in Java
+
+Regular Expressions Introduction (2 min)
+What Is a Regular Expression? (9 min)
+Parts of a Regular Expression (12 min)
+Regex with String & Scanner (8 min)
+Regex Mini Challenges (9 min)
+Pattern & Matcher (10 min)
+Matcher: find(), group(), Capturing (9 min)
+Matcher Replacement Methods (13 min)
+Regex Review: Phone Numbers & HTML Tags (15 min)
+Regex Challenge: Email Validator (8 min)
+
+
+Section 20: Java Input / Output (I/O) and File Operations
+
+I/O Working with Files Introduction (4 min)
+Exception Handling: Checked vs Unchecked (12 min)
+Try‑with‑Resources (11 min)
+File, Path, Files & Paths Overview (13 min)
+Using File, Path & Files (12 min)
+Path Methods (10 min)
+Directory Listings: list, walk, find (16 min)
+walkFileTree Explained (16 min)
+File Tree Walking Challenge (14 min)
+Reading Text Files – Java IO (11 min)
+Scanner for Reading Files (13 min)
+Character Sets & NIO.2 File Reading (11 min)
+Reading Files Challenge (12 min)
+Writing Data to Files (12 min)
+BufferedWriter, FileWriter & PrintWriter (14 min)
+File Writing Challenge (15 min)
+Renaming, Copying & Deleting Files (9 min)
+Recursive Copy & Delete (14 min)
+Directory & File Manipulation Challenge (9 min)
+RandomAccessFile Introduction (12 min)
+RandomAccessFile Continued (9 min)
+RandomAccessFile Challenge (9 min)
+DataOutputStream & DataInputStream (11 min)
+Serialization Part 1 (11 min)
+Serialization Part 2 (11 min)
+
+
+Section 21: Java Concurrency & Multithreading
+
+Processes & Threads Introduction (5 min)
+Java Threads & Thread Basics (10 min)
+Thread Creation & Execution (10 min)
+Interacting with Threads (15 min)
+Thread Challenge (5 min)
+Multithreading & Memory (13 min)
+Interleaving, Atomicity & Volatile (11 min)
+Synchronized Methods (12 min)
+Synchronized Blocks (11 min)
+Producer Consumer & Deadlocks (10 min)
+Avoiding Deadlocks (8 min)
+Synchronization Challenge (9 min)
+java.util.concurrent.locks (9 min)
+ReentrantLock Explained (9 min)
+ExecutorService Introduction (14 min)
+FixedThreadPool ExecutorService (9 min)
+Callable, Submit & Future (15 min)
+ExecutorService Challenge (11 min)
+ScheduledExecutorService (13 min)
+WorkStealingPool & ForkJoinPool (15 min)
+Parallel Streams (9 min)
+Parallel Streams Continued (14 min)
+Synchronized & Concurrent Collections (14 min)
+Thread‑Safe Lists & Queues (13 min)
+ArrayBlockingQueue Consumers (12 min)
+Revisiting Deadlock & Livelock (10 min)
+Livelock Example (16 min)
+Starvation & Fair Locks (8 min)
+Atomic Variables & WatchService (12 min)
+WatchService File Watcher (10 min)
+
+
+Section 22: Java Database Connectivity (JDBC & JPA)
+
+JDBC Introduction (5 min)
+MySQL Installation (Windows) (22 min)
+MySQL Installation (Mac) (14 min)
+MySQL Installation (Linux) (12 min)
+Database Basics Explained (10 min)
+MySQL Workbench Usage (13 min)
+JDBC API Overview (7 min)
+Connecting with JDBC (12 min)
+Querying Data (14 min)
+SQL Injection & ANSI SQL (13 min)
+Statement.execute vs executeQuery (13 min)
+Update, Delete & Insert Operations (13 min)
+Transactions, Commit & Rollback (15 min)
+Creating Database & SQL Exceptions (16 min)
+JDBC Challenge (16 min)
+PreparedStatement Introduction (13 min)
+PreparedStatement Continued (14 min)
+PreparedStatement Challenge (15 min)
+CallableStatement Introduction (15 min)
+CallableStatement OUT & INOUT (11 min)
+CallableStatement with Functions (15 min)
+CallableStatement Challenge (16 min)
+JPA & ORM Introduction (16 min)
+JPA CRUD Operations (17 min)
+JPA Relationships (12 min)
+JPQL Basics (14 min)
+JPQL Joins (10 min)
+CriteriaBuilder & Native SQL (14 min)
+JPA Final Challenge (15 min)
+JPA Bonus Challenge (6 min)
+
+
+Section 23: Java Network Programming
+
+Java Networking Introduction (2 min)
+Networking Terminology (13 min)
+Client‑Server with ServerSocket (13 min)
+Multi‑Threaded Server (8 min)
+ServerSocket vs ServerSocketChannel (10 min)
+NIO Channels & Buffers (5 min)
+ByteBuffer Explained (15 min)
+Polling Socket Channels (8 min)
+Selectors for Event‑Driven Servers (12 min)
+UDP Client‑Server (10 min)
+UDP Audio Streaming (10 min)
+DatagramChannel UDP Server (9 min)
+URI & URL Overview (11 min)
+URL vs URI (12 min)
+HttpURLConnection Introduction (11 min)
+Simple HttpServer (10 min)
+HTTP POST Requests (9 min)
+HttpClient Introduction (13 min)
+HttpClient POST Requests (10 min)
+Asynchronous HttpClient (14 min)
+CompletableFuture Methods (13 min)
+Concurrent HTTP Requests (13 min)
+Concurrent Request Challenge (10 min)
+Custom HttpClient BodyHandler (13 min)
+WebSocket Introduction (11 min)
+WebSocket Chat Application (12 min)
+
+
+Section 24: Debugging and Unit Testing
+
+Introduction to Debugging (18 min)
+More Debugging Techniques (11 min)
+Field Watch Points (16 min)
+Advanced Debugging (10 min)
+Unit Testing with JUnit Introduction (16 min)
+JUnit Assertions (18 min)
+More Assertions & Exception Handling (17 min)
+Parameterized Testing (12 min)
+JUnit Challenges 1 & 2 (22 min)
+JUnit Challenges 3–7 (12 min)
+JUnit Final Challenges (12 min)
+
+
+Section 25: JavaFX UI Development
+
+JavaFX Setup (5 min)
+First JavaFX App (6 min)
+JavaFX Overview (10 min)
+Hello World JavaFX (11 min)
+module‑info.java Note (1 min)
+GridPane Layout (16 min)
+HBox Layout (13 min)
+BorderPane Layout (13 min)
+Other Layouts (17 min)
+JavaFX Controls (15 min)
+RadioButton & CheckBox (17 min)
+ComboBox & ChoiceBox (17 min)
+Slider, Spinner, ColorPicker (15 min)
+TitledPane & Accordion (7 min)
+Event Handling (14 min)
+Event Handling Continued (15 min)
+UI Thread (15 min)
+JavaFX Threads (16 min)
+To‑Do App Setup (13 min)
+ListView Basics (13 min)
+Change Listener (14 min)
+Formatting Dates (7 min)
+Singletons (15 min)
+Load & Save from Disk (16 min)
+DialogPane (17 min)
+Dialog Handling (15 min)
+Bug Fix & Updates (10 min)
+Data Binding & Observable (11 min)
+Cell Factories (15 min)
+Context Menus (16 min)
+Key Events & Toolbars (16 min)
+SortedList (13 min)
+FilteredList (16 min)
+CSS Styling (18 min)
+Visual Effects & Transforms (17 min)
+Choosers & WebView (22 min)
+SceneBuilder Overview (3 min)
+SceneBuilder Windows (5 min)
+SceneBuilder Mac (4 min)
+SceneBuilder UI Overview (7 min)
+Building UI with SceneBuilder (16 min)
+SceneBuilder Code & CSS (17 min)
+Contacts App Part 1 (15 min)
+Contacts App Part 2 (13 min)
+Contacts App Part 3 (16 min)
+Contacts App Part 4 (14 min)
+Contacts App Wrap‑Up (9 min)
+
+
+Section 26: Java 9 Module System (JPMS)
+
+Java Modules Introduction (6 min)
+Module Declarations (2 min)
+Module Types Explained (6 min)
+
+
+Section 27: Migrating Projects to Java 9 Modules
+
+Project Setup & Compatibility Testing (7 min)
+Structuring Project for Modules (4 min)
+Creating First Module (12 min)
+Module Descriptor File (13 min)
+Creating Database Module (11 min)
+UI Module Challenge (10 min)
+Transitive Dependencies (7 min)
+
+Section 28: Course Introduction – Old Content for Java 11
+
+Introduction To The Course — 2min
+Remaster in Progress — 3min
+Video Quality — 1min
+Subtitles — 3min
+How to Get Help — 5min
+Important Tip – Source Code — 2min
+
+
+Section 29: Software Tools Setup – Old Content for Java 11
+
+Biggest Tip to Succeed as a Java Programmer — 1min
+The Four Stages of Becoming a Programmer — 1min
+Software Tools Introduction — 1min
+Java Development Kit Installation Overview — 2min
+Install JDK 11 for Windows — 3min
+Installing IntelliJ IDEA for Windows — 7min
+IMPORTANT – Configuring IntelliJ IDEA — 1min
+Install JDK 11 for Mac — 2min
+Installing IntelliJ IDEA for Mac — 5min
+Install JDK 11 for Linux — 5min
+Installing IntelliJ IDEA for Linux — 5min
+Configuring IntelliJ IDEA (All OS) — 5min
+
+
+Section 30: First Steps – Old Content for Java 11
+
+Introduction — 1min
+Hello World Project — 7min
+Defining the Main Method — 7min
+Hello World Challenge & Common Errors — 3min
+Variables — 9min
+Starting Out with Expressions — 7min
+Primitive Types — 12min
+byte, short, long and width — 10min
+Casting in Java — 4min
+Primitive Types Challenge — 4min
+float and double Primitive Types — 7min
+Floating Point Precision & Challenge — 10min
+char and boolean Primitive Types — 10min
+Primitive Types Recap & String — 13min
+Operators, Operands and Expressions — 9min
+Abbreviating Operators — 4min
+if‑then Statement — 9min
+Logical AND Operator — 6min
+Logical OR Operator — 6min
+Assignment vs Equals Operator — 8min
+Ternary Operator — 4min
+Operator Precedence & Challenge — 12min
+First Steps Summary — 1min
+End of Remaster — 2min
+
+
+Section 31: Expressions, Statements, and More – Old Content
+
+Introduction — 1min
+Keywords and Expressions — 7min
+Statements, Whitespace & Indentation — 9min
+Code Blocks & if‑then‑else — 17min
+if‑then‑else Recap — 4min
+Methods in Java — 18min
+More on Methods & Challenge — 16min
+Method Challenge – Final Changes — 7min
+DiffMerge Tool Introduction — 2min
+Install DiffMerge — 2min
+Using DiffMerge — 17min
+Coding Exercises — 13min
+Coding Exercises Example (Part 1) — 11min
+Coding Exercises Example (Part 2) — 12min
+Coding Exercises Example (Part 3) — 10min
+Method Overloading — 27min
+Method Overloading Recap — 4min
+Seconds & Minutes Challenge — 14min
+Bonus Challenge Solution — 11min
+
+
+Section 32: Control Flow Statements – Old Content
+
+Introduction — 1min
+switch Statement (+ Challenge) — 19min
+Day of the Week Challenge — 11min
+for Statement (+ Challenge) — 25min
+for Loop Recap — 8min
+Sum 3 and 5 Challenge — 6min
+while and do‑while Statements — 24min
+while & do‑while Recap — 8min
+Digit Sum Challenge — 10min
+Parsing Values from a String — 11min
+Reading User Input — 12min
+Problems and Solutions — 10min
+Reading User Input Challenge — 15min
+Min and Max Challenge — 16min
+
+
+Section 33: Arrays, Lists & Autoboxing – Old Content
+
+Arrays — 21min
+Arrays Challenge — 16min
+Arrays Recap — 7min
+Reference Types vs Value Types — 16min
+Minimum Element Challenge — 12min
+Reverse Array Challenge — 11min
+List & ArrayList (Part 1) — 16min
+ArrayList Part 2 — 20min
+ArrayList Part 3 — 17min
+ArrayList Challenge (Part 1) — 14min
+ArrayList Challenge (Part 2) — 18min
+ArrayList Challenge (Part 3) — 11min
+Bug Fix for ArrayList Challenge — 7min
+Autoboxing & Unboxing — 16min
+Autoboxing Challenge (Part 1) — 17min
+Autoboxing Challenge (Part 2) — 17min
+Autoboxing Challenge (Part 3) — 10min
+LinkedList Part 1 — 17min
+LinkedList Part 2 — 16min
+LinkedList Part 3 — 21min
+LinkedList Challenge (Part 1) — 15min
+Bug Fix – Track Error — 1min
+LinkedList Challenge (Part 2) — 17min
+LinkedList Challenge (Part 3) — 16min
+
+
+Section 34: Inner & Abstract Classes – Old Content
+
+Interfaces — 13min
+Interfaces Part 2 — 15min
+Interfaces Challenge Part 1 — 18min
+Interfaces Challenge Part 2 — 9min
+Inner Classes Part 1 — 17min
+Inner Classes Part 2 — 15min
+Inner Classes Challenge — 12min
+Abstract Classes Part 1 — 17min
+Abstract Classes Part 2 — 11min
+Interface vs Abstract Class — 5min
+Abstract Class Challenge Part 1 — 20min
+Abstract Class Challenge Part 2 — 13min
+Abstract Class Challenge Part 3 — 20min
+
+
+Section 35: Java Generics – Old Content
+
+Generics Introduction — 11min
+Generics Class — 12min
+Generics Class Part 2 — 19min
+Generics Class Part 3 — 10min
+Generics Challenge — 13min
+
+
+Section 36: Lambda Expressions – Old Content
+
+Lambda Expressions Introduction — 16min
+Lambda Expressions Continued — 15min
+Lambda Expressions Nested Blocks — 15min
+Scope and Functional Programming — 15min
+Functional Interfaces & Predicates — 17min
+Predicates & Suppliers — 12min
+Functions — 13min
+Chaining Functions — 12min
+Lambda Challenge Part 1 — 12min
+Lambda Challenge Part 2 — 17min
+
+
+Section 37: Streams – Old Content
+
+Streams — 14min
+Streams: Intermediate & Terminal Operations — 13min
+Streams: flatMap & Best Practices — 22min
+
+
+Section 38: Naming Conventions & Packages – Old Content
+
+Naming Conventions — 7min
+Packages — 18min
+Packages Part 2 — 12min
+Packages Part 3 — 12min
+Packages Challenge — 13min
+Scope — 17min
+Scope Part 2 & Visibility — 12min
+Scope Challenge — 7min
+Access Modifiers — 17min
+static Keyword — 13min
+final Keyword — 15min
+Static Initializers & final (Part 2) — 9min
+
+Section 39: Java Collections – Old Content for Java 11
+
+Collections Overview — 16min
+Binary Search — 16min
+Collections List Methods — 18min
+Comparable and Comparator — 19min
+Maps — 17min
+Map Continued and Adventure Game — 17min
+Adding Exits to the Adventure Game — 18min
+Adventure Game Challenge — 8min
+Immutable Classes — 16min
+Immutable Class Challenge — 5min
+Sets & HashSet — 20min
+HashSet – equals() and hashCode() — 17min
+Finish equals() and hashCode() — 11min
+Issue with equals() and Subclassing — 12min
+Sets – Symmetric & Asymmetric — 16min
+Finishing Off Sets — 9min
+Sets Challenge Part 1 — 15min
+Sets Challenge Part 2 — 13min
+Sets Challenge Part 3 — 18min
+Sorted Collections — 13min
+StockList Class with Maps — 17min
+Add a Basket — 16min
+TreeMap and Unmodifiable Maps — 21min
+Challenge Part 1 — 13min
+Challenge Part 2 — 11min
+Challenge Part 3 — 8min
+Challenge Part 4 (Final) — 18min
+
+
+Section 40: Basic Input & Output (java.util) – Old Content
+
+Exceptions — 14min
+Stack Trace and Call Stack — 13min
+Catching and Throwing Exceptions — 14min
+Multi‑Catch Exceptions — 8min
+Introduction to I/O — 16min
+Writing Content – FileWriter & finally — 15min
+Try‑With‑Resources — 12min
+FileReader and Closeable — 13min
+BufferedReader — 13min
+Loading Large Files — 7min
+Challenge — 5min
+BufferedWriter Challenge — 13min
+Byte Streams — 16min
+Reading Binary Data & EOF Exceptions — 16min
+Object I/O & Serialization — 14min
+Finish Object I/O & RandomAccessFile — 16min
+Create Random Access File — 14min
+Update Static Initializer with Random Access — 12min
+Update Adventure Game (RAF) — 14min
+Java NIO — 15min
+Writing Objects with NIO — 12min
+Reading & Writing with NIO — 16min
+Writing Binary Files with NIO — 14min
+Reading Files with NIO — 16min
+Absolute & Relative Reads — 11min
+Chained Put Methods — 14min
+Writing Sequentially — 13min
+FileChannel, Copy Files & Pipes — 15min
+File System — 18min
+More on Paths — 12min
+Exists and CopyFile — 12min
+Move, Rename & Delete — 11min
+File Attributes — 13min
+Read Directory Contents — 14min
+Separators, Temp Files & File Stores — 12min
+Walk File Tree — 12min
+Copy Entire Tree — 13min
+Mapping IO and NIO Methods — 13min
+
+
+Section 41: Regular Expressions – Old Content
+
+Regular Expressions Introduction — 16min
+Character Classes & Boundary Matchers — 14min
+Quantifiers, Pattern & Matcher — 15min
+Matcher find() and group() — 15min
+AND, OR & NOT — 15min
+Regex Challenge Part 1 — 17min
+Regex Challenge Part 2 — 16min
+Regex Challenge Part 3 — 6min
+
+
+Section 42: Databases – Old Content
+
+Section Introduction — 2min
+Database Terminology — 11min
+Install SQLite (Windows) — 8min
+Install SQLite (Mac) — 2min
+Install SQLite (Linux) — 3min
+Introduction to SQLite — 11min
+More with SQLite — 11min
+Querying Data with SQL — 16min
+SQL Order By & Joins — 13min
+More Complex Joins — 12min
+Wildcards & Views — 15min
+Housekeeping & Final SQL Challenge — 14min
+JDBC & SQLite GUI Browser — 16min
+Creating Databases with JDBC — 17min
+JDBC Insert, Update & Delete — 16min
+executeQuery() & Constants — 21min
+Music SQLite Database — 13min
+Query Artists — 15min
+Execute SQL in DB Browser — 17min
+Query Albums by Artist — 16min
+Query Artists for Song — 15min
+ResultSet Metadata — 15min
+Functions and Views — 17min
+Querying Views — 12min
+SQL Injection & PreparedStatements — 17min
+Transactions — 14min
+Insert Records with JDBC — 10min
+Insert Albums, Artists & Songs — 14min
+Test Insert JDBC Code — 18min
+JDBC with GUI Program — 18min
+Add Artists — 13min
+Fix Artists & Preload Records — 13min
+Implement Artist Query — 12min
+Add ProgressBar — 10min
+Handling Updates — 15min
+
+
+Section 43: Java Networking Programming – Old Content
+
+Networking Overview — 10min
+First Client & Server Apps — 15min
+Multi‑Threaded Server — 14min
+Multi‑Threading & Timeouts — 13min
+UDP Server & Client — 18min
+High‑Level APIs (URI/URL) — 19min
+URL Connections & InputStreamReader — 16min
+HttpURLConnection — 18min
+Alternatives to HttpURLConnection — 21min
+
+
+Section 44: Archived Videos
+
+JavaFX Introduction (JDK 8) — 18min
+JavaFX Code vs FXML (JDK 8) — 13min
+
+
+Section 45: Extra Information
+
+Source Code for All Programs — 29min
+Bonus Lecture & Information — 5min
